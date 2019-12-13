@@ -1,3 +1,3 @@
 # wal_destiny
-wal的仓库
-小白刷leetcode笔记
+wal的仓库  
+初试牛刀-刷leetcode的笔记
