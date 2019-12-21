@@ -7,4 +7,8 @@
 
 
 # 经典题目
+
+[leetcode 11 在数组中找出其中的两条线使得它们与 x 轴共同构成的容器可以容纳最多的水](E:/English/GitHub_test/wal_destiny/leetcode/11-Container-With-Most-Water.md)  
+[leetcode 15 判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0](E:/English/GitHub_test/wal_destiny/leetcode/15-3Sum.md)  
+[leetcode 19 删除链表的倒数第 n 个节点](E:/English/GitHub_test/wal_destiny/leetcode/19-Remove-Nth-Node-From-End-of-List.md)    
 [leetcode 581 寻找一个连续的子数组排序，使整个数组都会变为升序排序](E:/English/GitHub_test/wal_destiny/leetcode/581-Shortest-Unsorted-Continuous-Subarray.md)

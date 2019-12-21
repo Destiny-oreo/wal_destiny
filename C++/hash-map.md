@@ -8,6 +8,10 @@ using namespace std;	//否则后面都要使用std::map
 [特定结构体重载排序时](https://www.cnblogs.com/ZY-Dream/p/10037931.html)
 # 经典题目
 [leetcode 1 该数组中找出和为目标值的那两个整数的下标](E:/English/GitHub_test/wal_destiny/leetcode/1-Two-Sum.md)  
+[leetcode 17 该数组中找出和为目标值的那两个整数的下标](E:/English/GitHub_test/wal_destiny/leetcode/17-letter-combinations-of-a-phone-number.md)  
+[leetcode 1 该数组中找出和为目标值的那两个整数的下标](E:/English/GitHub_test/wal_destiny/leetcode/1-Two-Sum.md)  
+[leetcode 1 该数组中找出和为目标值的那两个整数的下标](E:/English/GitHub_test/wal_destiny/leetcode/1-Two-Sum.md)  
+[leetcode 1 该数组中找出和为目标值的那两个整数的下标](E:/English/GitHub_test/wal_destiny/leetcode/1-Two-Sum.md)  
 [leetcode 560 找到该数组中和为 k 的连续的子数组的个数](E:/English/GitHub_test/wal_destiny/leetcode/560-Subarray-Sum-Equals-K.md)
 # 基本函数
 ```
