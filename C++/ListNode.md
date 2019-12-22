@@ -12,6 +12,8 @@
 # 经典题目
 [leetcode 2 将逆序链表表示的两个数相加，返回一个新的链表来表示它们的和](E:/English/GitHub_test/wal_destiny/leetcode/2-Add-Two-Numbers.md)  
 [leetcode 19 删除链表的倒数第 n 个节点](E:/English/GitHub_test/wal_destiny/leetcode/19-Remove-Nth-Node-From-End-of-List.md)  
+[leetcode 21 将两个有序链表合并为一个新的有序链表](E:/English/GitHub_test/wal_destiny/leetcode/21-Merge-Two-Sorted-Lists.md)   
+
 # [常见算法](https://blog.csdn.net/qq_18150255/article/details/88636821https://blog.csdn.net/qq_18150255/article/details/88636821)
 - ## 链表反转
   逆序的思路：首先声明一个空指针node指向一个空节点，然后将原链表中的节点1指向node，接着声明一个临时根节点root用来保存链表的表头，循环操作，直到root为空指针。  
