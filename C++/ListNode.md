@@ -13,6 +13,8 @@
 [leetcode 2 将逆序链表表示的两个数相加，返回一个新的链表来表示它们的和](E:/English/GitHub_test/wal_destiny/leetcode/2-Add-Two-Numbers.md)  
 [leetcode 19 删除链表的倒数第 n 个节点](E:/English/GitHub_test/wal_destiny/leetcode/19-Remove-Nth-Node-From-End-of-List.md)  
 [leetcode 21 将两个有序链表合并为一个新的有序链表](E:/English/GitHub_test/wal_destiny/leetcode/21-Merge-Two-Sorted-Lists.md)   
+[leetcode 23 将k个有序链表合并为一个新的有序链表](E:/English/GitHub_test/wal_destiny/leetcode/23-Merge-k-Sorted-Lists.md)   
+[leetcode 24 两两交换给定链表其中相邻的节点](E:/English/GitHub_test/wal_destiny/leetcode/24-Swap-Nodes-in-Pairs.md)   
 
 # [常见算法](https://blog.csdn.net/qq_18150255/article/details/88636821https://blog.csdn.net/qq_18150255/article/details/88636821)
 - ## 链表反转
