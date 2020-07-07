@@ -9,12 +9,24 @@
  * };
 ```
 - **优势**：和数组相比，当进行插入和删除操作时，链表操作的时间复杂度仅为O(1)。另外，因为链表在内存中不是连续存储的，所以可以充分利用内存中的碎片空间。除此之外，链表还是很多算法的基础，最常见的哈希表就是基于链表来实现的。
+
+- **[跳跃表](https://mp.weixin.qq.com/s/AGPCfFg7bEiCsa5zNeCi4A)**：对于具有 n 个元素的链表，我们可以采取 ** (logn + 1) 层指针路径的形式，就可以实现在 O(logn) 的时间复杂度内，查找到某个目标元素了，这种数据结构，我们也称之为跳跃表，跳跃表也可以算是链表的一种变形，只是它具有二分查找的功能。
+
+
 # 经典题目
 [leetcode 2 将逆序链表表示的两个数相加，返回一个新的链表来表示它们的和](E:/English/GitHub_test/wal_destiny/leetcode/2-Add-Two-Numbers.md)  
 [leetcode 19 删除链表的倒数第 n 个节点](E:/English/GitHub_test/wal_destiny/leetcode/19-Remove-Nth-Node-From-End-of-List.md)  
 [leetcode 21 将两个有序链表合并为一个新的有序链表](E:/English/GitHub_test/wal_destiny/leetcode/21-Merge-Two-Sorted-Lists.md)   
 [leetcode 23 将k个有序链表合并为一个新的有序链表](E:/English/GitHub_test/wal_destiny/leetcode/23-Merge-k-Sorted-Lists.md)   
 [leetcode 24 两两交换给定链表其中相邻的节点](E:/English/GitHub_test/wal_destiny/leetcode/24-Swap-Nodes-in-Pairs.md)   
+[leetcode 83 排序链表，删除所有重复的元素](E:/English/GitHub_test/wal_destiny/leetcode/83-remove-duplicates-from-sorted-list.md)  
+
+[leetcode 21 将两个有序链表合并为一个新的有序链表](E:/English/GitHub_test/wal_destiny/leetcode/21-Merge-Two-Sorted-Lists.md) 
+[leetcode 21 将两个有序链表合并为一个新的有序链表](E:/English/GitHub_test/wal_destiny/leetcode/21-Merge-Two-Sorted-Lists.md) 
+[leetcode 21 将两个有序链表合并为一个新的有序链表](E:/English/GitHub_test/wal_destiny/leetcode/21-Merge-Two-Sorted-Lists.md) 
+[leetcode 21 将两个有序链表合并为一个新的有序链表](E:/English/GitHub_test/wal_destiny/leetcode/21-Merge-Two-Sorted-Lists.md) 
+
+
 
 # [常见算法](https://blog.csdn.net/qq_18150255/article/details/88636821https://blog.csdn.net/qq_18150255/article/details/88636821)
 - ## 链表反转

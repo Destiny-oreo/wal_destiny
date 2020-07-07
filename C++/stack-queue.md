@@ -15,3 +15,38 @@ top() 返回栈顶元素，不删除（获取）
 [leetcode 20 判断符号字符串是否有效](E:/English/GitHub_test/wal_destiny/leetcode/20-Valid-Parentheses.md)  
 
 
+### set
+vector封装数组，list封装了链表，map和set封装了二叉树,set元素唯一，即使重复插入也不会多次计数，lower_bound显示小于等于 upper大于，find显示下标，默认升序排列   
+[自定义比较函数](https://www.cnblogs.com/xjyxp/p/11447091.html)不适用friend只能有一个参数，使用friend以后才可以传入两个参数进行[重载](https://www.cnblogs.com/lengbingshy/p/3491192.html)
+include < set>；  
+set<int/char/string/基本数据类型/自定义类型/结构体类型/.....>iset   
+```	set<infos> s;
+	for (int i = 0; i < dn.size(); i++) {
+		infos temp;
+		temp.po = dn[i];
+		temp.dis = distance(dn[i], center);
+		s.insert(temp);
+	}
+	set<infos>::iterator it = s.begin();
+	for (; it != s.end(); it ++ ) {
+		printf("%d %d \n", (*it).po.x, (*it).po.y);
+	} 
+```
+
+### [pair](https://www.cnblogs.com/Sunrises/p/10363394.html)
+#include < utility> #include< algorithm>(sort)  
+```
+pair<int,int>Item[n];    //定义pair对象数组Item[n]
+sort(Item, Item+n); 　　//默认对Item的first的值进行排序 默认是按元素从小到大排序
+bool cmp（pair<int, int>a, pair<int, int>b）
+{
+    return a.first<b.first;            //根据fisrt的值升序排序
+} 
+sort(Item, Item+n, cmp);       // 按照自定义的顺序进行排序
+```
+直接使用vector也可以[排序](https://www.cnblogs.com/zhouxiaosong/p/5557990.html)  
+`sort(a.begin(), a.end());`
+
+
+
+
