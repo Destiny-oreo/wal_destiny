@@ -10,7 +10,7 @@
 
 输入：
 shorter = 1  
-longer = 2  
+longer = 2   
 k = 3  
 输出： {3,4,5,6}  
 提示：  
