@@ -8,6 +8,9 @@
 - u表示将后面跟的字符串以unicode格式存储
 - plt.rcParams['font.sans-serif']=['SimHei'] #用来正常显示中文标签 
 - plt.rcParams['axes.unicode_minus']=False #用来正常显示负号
+- anaconda查看安装列表 pip list
+- [sklearn常用算法](https://blog.csdn.net/hzp123123/article/details/77744420/)
+- [算法小结](https://www.cnblogs.com/rix-yb/p/9787728.html)
 - 
 
 
@@ -55,12 +58,18 @@ In [8]: s.values  Out[8]: array([1, 4, 'ww', 'tt'], dtype=object)
 
 
 #### DataFrame
+- df=pd.DataFrame({u'获救':Survived_1, u'未获救':Survived_0})  
+df.plot(kind="bar",stacked=True) ##注意哪个才是x轴，分类依据，stacked堆叠条形图
+- [df.loc【】](https://blog.csdn.net/u014712482/article/details/85080864)[]里边为先行后列
+- [get_dummies函数](https://blog.csdn.net/binbigdata/article/details/84842179)
+- concat和[drop](https://blog.csdn.net/lhy2239705435/article/details/90052681)分别为合并和删除函数，axis=0时行，=1时列df = pd.concat([data_train, dummies_Cabin, dummies_Embarked, dummies_Sex, dummies_Pclass], axis=1)，df.drop(['Pclass', 'Name', 'Sex', 'Ticket', 'Cabin', 'Embarked'], axis=1, inplace=True)inplace表示是否在原来的数据上改变
+- 
 
 
 ### Scikit-learn
 
 
-#### 
+### [随机森林](https://blog.csdn.net/colourful_sky/article/details/82082854)
 
 
 
