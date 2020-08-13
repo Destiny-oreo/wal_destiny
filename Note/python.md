@@ -9,8 +9,7 @@
 - plt.rcParams['font.sans-serif']=['SimHei'] #用来正常显示中文标签 
 - plt.rcParams['axes.unicode_minus']=False #用来正常显示负号
 - anaconda查看安装列表 pip list
-- [sklearn常用算法](https://blog.csdn.net/hzp123123/article/details/77744420/)
-- [算法小结](https://www.cnblogs.com/rix-yb/p/9787728.html)
+
 - 
 
 
@@ -24,7 +23,7 @@
 - 将a当做一个块复制成3*5个a：b=np.tile(a,(3,5))
 - y=argmax f(t) ：y是f(t)函数取到最大值时的参数t
 - np.save('p.npy', p)     # 保存到文件，q = np.load('p.npy')    # 从文件读取
-- 
+- [reshape](https://blog.csdn.net/qq_29831163/article/details/90112000)numpy.arange(n).reshape(a, b)    依次生成n个自然数，并且以a行b列的数组形式显示
 
 #### 线性代数模块
 
@@ -63,11 +62,13 @@ df.plot(kind="bar",stacked=True) ##注意哪个才是x轴，分类依据，stack
 - [df.loc【】](https://blog.csdn.net/u014712482/article/details/85080864)[]里边为先行后列
 - [get_dummies函数](https://blog.csdn.net/binbigdata/article/details/84842179)
 - concat和[drop](https://blog.csdn.net/lhy2239705435/article/details/90052681)分别为合并和删除函数，axis=0时行，=1时列df = pd.concat([data_train, dummies_Cabin, dummies_Embarked, dummies_Sex, dummies_Pclass], axis=1)，df.drop(['Pclass', 'Name', 'Sex', 'Ticket', 'Cabin', 'Embarked'], axis=1, inplace=True)inplace表示是否在原来的数据上改变
-- 
+- [dataframe.filter函数](https://blog.csdn.net/weixin_44668131/article/details/99437698)主要用来对DataFrame进行筛选
 
 
 ### Scikit-learn
-
+- [sklearn常用算法](https://blog.csdn.net/hzp123123/article/details/77744420/)
+- [算法小结](https://www.cnblogs.com/rix-yb/p/9787728.html)
+- [sklearn preprocessing （预处理）](https://www.cnblogs.com/keye/p/8194539.html) [正则二值化等预处理](https://blog.csdn.net/weixin_40807247/article/details/82793220)
 
 ### [随机森林](https://blog.csdn.net/colourful_sky/article/details/82082854)
 

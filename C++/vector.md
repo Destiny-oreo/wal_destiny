@@ -106,6 +106,11 @@ a==b;
  sort(a.begin(),a.end());
  //对a中的从a.begin()（包括它）到a.end()（不包括它）的元素倒置，  
 但不排列，如a中元素为1,3,2,4,倒置后为4,2,3,1
+sort(people.begin(),people.end(),[](const auto& a,const auto& b){
+            return (a[0]>b[0]||(a[0]==b[0]&&a[1]<b[1]));
+        });
+static bool cmp(vector<int>& a,vector<int>& b){return (a[0]>b[0]||(a[0]==b[0]&&a[1]<b[1]));}
+sort(people.begin(),people.end(),cmp);
  reverse(a.begin(),a.end());
   //把a中的从a.begin()（包括它）到a.end()（不包括它）的元素  
 复制到b中，从b.begin()+1的位置（包括它）开始复制，覆盖掉原有元素
