@@ -6,6 +6,7 @@ using namespace std;	//否则后面都要使用std::map
 定义：`map<int,string> hash_map`  
 特点：map中的元素是自动按照key升序排序，不能再使用sort函数  
 [特定结构体重载排序时](https://www.cnblogs.com/ZY-Dream/p/10037931.html)
+- [unordered_map和map](https://blog.csdn.net/BillCYJ/article/details/78985895?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param)
 # 经典题目
 [leetcode 1 该数组中找出和为目标值的那两个整数的下标](E:/English/GitHub_test/wal_destiny/leetcode/1-Two-Sum.md)  
 [leetcode 3 找出其中不含有重复字符的 最长子串 的长度](E:\English\GitHub_test\wal_destiny\leetcode\3-Longest-Substring-Without-Repeating-Characters.md)  
