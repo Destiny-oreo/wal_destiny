@@ -65,6 +65,7 @@ df.plot(kind="bar",stacked=True) ##注意哪个才是x轴，分类依据，stack
 - [dataframe.filter函数](https://blog.csdn.net/weixin_44668131/article/details/99437698)主要用来对DataFrame进行筛选
 - [数据选取、切片](https://blog.csdn.net/yoonhee/article/details/76168253?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param)
 - to_csv("logistic.csv",index=False)，其中要提交的话必须保证结果是np.int32类型
+- [groupby以及df常用函数](https://www.cnblogs.com/Yanjy-OnlyOne/p/11217802.html)
 
 
 ### Scikit-learn
@@ -73,6 +74,7 @@ df.plot(kind="bar",stacked=True) ##注意哪个才是x轴，分类依据，stack
 - [sklearn preprocessing （预处理）](https://www.cnblogs.com/keye/p/8194539.html) [正则二值化等预处理](https://blog.csdn.net/weixin_40807247/article/details/82793220)标准化方法
 - [cross_val_score](https://blog.csdn.net/FontThrone/article/details/79220127?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param)交叉验证的cv参数
 - [绘制学习曲线](https://blog.csdn.net/gracejpw/article/details/102370364)
+- clf:classifier  rfr:RandomForestRegressor
 
 ### [随机森林](https://blog.csdn.net/colourful_sky/article/details/82082854)
 - [参数详解](https://blog.csdn.net/u012102306/article/details/52228516)
