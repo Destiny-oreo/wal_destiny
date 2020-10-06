@@ -60,8 +60,8 @@ In [8]: s.values  Out[8]: array([1, 4, 'ww', 'tt'], dtype=object)
 - df=pd.DataFrame({u'获救':Survived_1, u'未获救':Survived_0})  
 df.plot(kind="bar",stacked=True) ##注意哪个才是x轴，分类依据，stacked堆叠条形图
 - [df.loc【】](https://blog.csdn.net/u014712482/article/details/85080864)[]里边为先行后列
-- [get_dummies函数](https://blog.csdn.net/binbigdata/article/details/84842179)
-- concat和[drop](https://blog.csdn.net/lhy2239705435/article/details/90052681)分别为合并和删除函数，axis=0时行，=1时列df = pd.concat([data_train, dummies_Cabin, dummies_Embarked, dummies_Sex, dummies_Pclass], axis=1)，df.drop(['Pclass', 'Name', 'Sex', 'Ticket', 'Cabin', 'Embarked'], axis=1, inplace=True)inplace表示是否在原来的数据上改变
+- [get_dummies函数](https://blog.csdn.net/binbigdata/article/details/84842179)将指定列因子化以后变成新的多列数据，可以加在原始数据以后或者变成新的DataFrame数据
+- concat和[drop](https://blog.csdn.net/lhy2239705435/article/details/90052681)分别为合并和删除函数，axis=0时行，axis=1时列df = pd.concat([data_train, dummies_Cabin, dummies_Embarked, dummies_Sex, dummies_Pclass], axis=1)，df.drop(['Pclass', 'Name', 'Sex', 'Ticket', 'Cabin', 'Embarked'], axis=1, inplace=True)inplace表示是否在原来的数据上改变
 - [dataframe.filter函数](https://blog.csdn.net/weixin_44668131/article/details/99437698)主要用来对DataFrame进行筛选
 - [数据选取、切片](https://blog.csdn.net/yoonhee/article/details/76168253?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param)
 - to_csv("logistic.csv",index=False)，其中要提交的话必须保证结果是np.int32类型
