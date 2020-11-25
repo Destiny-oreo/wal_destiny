@@ -9,7 +9,7 @@
 - plt.rcParams['font.sans-serif']=['SimHei'] #用来正常显示中文标签 
 - plt.rcParams['axes.unicode_minus']=False #用来正常显示负号
 - anaconda查看安装列表 pip list
-- 
+
 
 
 ## [常用函数](https://www.cnblogs.com/tdalcn/p/7818895.html) 
@@ -23,6 +23,7 @@
 - y=argmax f(t) ：y是f(t)函数取到最大值时的参数t
 - np.save('p.npy', p)     # 保存到文件，q = np.load('p.npy')    # 从文件读取
 - [reshape](https://blog.csdn.net/qq_29831163/article/details/90112000)numpy.arange(n).reshape(a, b)    依次生成n个自然数，并且以a行b列的数组形式显示
+- [numpy的stack(),hstack() vstack()](https://blog.csdn.net/csdn15698845876/article/details/73380803/?utm_medium=distribute.pc_relevant.none-task-blog-baidulandingword-2&spm=1001.2101.3001.4242)stack函数时，对第一个参数进行堆叠，具体见链接，hstack(水平方向堆叠)和vtack(垂直方向堆叠)函数作用相反
 
 #### 线性代数模块
 
