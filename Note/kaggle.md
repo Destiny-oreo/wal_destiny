@@ -36,32 +36,43 @@
 - [filter() 函数](https://www.runoob.com/python/python-func-filter.html)过滤序列，接受两个参数，第一个为函数，第二个为序列，序列的每个元素作为参数传递给函数进行判断，返回True和False
 - print(new_list)中的new_list是在以列表形式的情况下可以输出，在无法输出时可以尝试print(list(xx))
 - lambda作为一个表达式，定义了一个匿名函数，在x:x+1例的代码中x为入口参数，x+1为函数体
+- imshow(x,cmap),cmap代表颜色图谱，默认RGB，可选gray jet等  plt.cm.gray
+- %matplotlib inline #为了在jupyter notebook里面作图才需要这个命令 可以省略掉plt.show()命令
+- [pickle模块封装读取](https://www.cnblogs.com/lincappu/p/8296078.html)
+- [pip和conda区别](https://blog.csdn.net/weixin_38267508/article/details/83345131)1.都是包管理器，conda时通用的，可以管理任何语言的包，pip主要管理python包；2.conda安装的库会放在pkgs目录下，其他环境需要这个库时候可以直接复制不用重新下载，卸载时候两者作用类似，但是再次下载时候依然可以从pkgs里面复制出来，conda 在指定环境下安装包：$conda install -n env_name pandas；3.conda安装的都是编译好的二进制包，不需要自己编译，pip需要以来系统的编译器
+
+
+#### [tensorflow](https://blog.csdn.net/qq_16137569/article/details/72802387)
 - a=tf.cast(x, dtype, name=None) 待转换的数据（张量）目标数据类型tf.string等
 - [tf.train.slice_input_producer](https://blog.csdn.net/dcrmg/article/details/79776876)tensor生成器 生成相同大小的队列
 - tf.train.batch tensor队列生成器，作用是按照给定的tensor顺序，把batch_size个tensor推送到文件队列，作为训练一个batch的数据，等待tensor出队执行计算
+- with tf.Session() as sess:使用session启用流图算法，同时结束以后自动释放资源，否则要see.close()
+- [Coordinator](https://blog.csdn.net/weixin_42052460/article/details/80714539)tf.Coordinator和tf.QueueRunner两个类主要来实现对Session中多线程的管理
 
 
 #### [keras](https://blog.csdn.net/weixin_41065383/article/details/89350475?utm_medium=distribute.pc_relevant.none-task-blog-title-6&spm=1001.2101.3001.4242)
 - 由纯python编写的基于theano/tensorflow的深度学习框架，支持CNN和RNN或二者的结合、无缝CPU和GPU切换
 - Sequential 序贯模型，单输入单输出，编译速度快 tensorflow1.14.0+keras 2.2.5+python 3.6+CUDA10.1+Cudnn7.4
+- 读入所有数据，转为需要的维度张量并转为float32类型，然后归一化增加精度，最后将标签转为oneShot以便于分类预测。
+
 ```
-from keras.models import Sequential  
+from keras.models import Sequential    
 from keras.layers.core import Dense, Dropout, Activation  
-from keras.optimizers import SGD  
+from keras.optimizers import SGD   
 1.选择模型 model = Sequential()
 2.构建网络层
-model.add(Dense(500,input_shape=(784,))) # Dense为全连接层 500表示输出未付，784表示输入维度
+model.add(Dense(500,input_shape=(784,))) # Dense为全连接层 500表示输出维度，784表示输入维度
 model.add(Activation('tanh')) # 激活层Activation，激活函数是tanh
-model.add(Dropout(0.5)) # 采用50%的dropout，在训练过程中每次更新参数时随机断开一定百分比（rate）的输入神经元，防止过拟合
+model.add(Dropout(0.5)) # 采用50%的dropout，在训练过程中每次更新参数时随机断开一定百分比（rate）的输入神经元，防止过拟合  或者20%
 
-odel.add(Dense(500)) # 隐藏层节点500个  
+model.add(Dense(500)) # 隐藏层节点500个  
 model.add(Activation('tanh'))  
 model.add(Dropout(0.5))
 
 model.add(Dense(10)) # 输出结果是10个类别，十个输出节点，所以维度是10  
 model.add(Activation('softmax')) # 最后一层用softmax作为激活函数
 3.编译
-sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True) # 优化函数，设定学习率（lr）等参数  
+sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True) # 优化函数，设定学习率（lr）等参数 sgd为随机梯度下降法，作为参数更新的规则 还有adam RMSProp Nesterov-SGD  
 model.compile(loss='categorical_crossentropy', optimizer=sgd, class_mode='categorical') # 使用交叉熵作为loss函数
 4.训练
 .fit的一些参数
@@ -92,12 +103,35 @@ test_max = numpy.argmax(Y_test, axis = 1)
 result_bool = numpy.equal(result_max, test_max)
 true_num = numpy.sum(result_bool)
 print("")
-print("The accuracy of the model is %f" % (true_num/len(result_bool)))
+print("The accuracy of the model is %f" % (true_num/len(result_bool))) 
+``` 
+- [ImageDataGenerator](https://blog.csdn.net/qq_27825451/article/details/90056896)图片生成器，一次一个批次的喂给模型训练，同时适时对数据增强处理
+- [model.fit_generator()和model.fit()](https://www.jb51.net/article/188900.htm)数据量大的时候需要使用batch来进行fit_generator训练，生成器与模型同时运行提高了效率，[两者的区别](https://blog.csdn.net/learning_tortosie/article/details/85243310)
+- 卷积神经网络CNN：有效地减少全连接神经网络参数量太大的问题，[搭建过程](https://zhuanlan.zhihu.com/p/53790130)
+- [to_categorical](https://blog.csdn.net/nima1994/article/details/82468965) 将整型标签转为Oneshot,即进行编码，num_classes需要大于max(y)或者直接默认max(y)+1
+- [Conv2D](https://blog.csdn.net/godot06/article/details/105054657)卷积层设置
+- [MaxPool2D](https://www.codenong.com/cs105214504/)池化层，与卷积层搭配使用，一般默认(2,2)使输入在两个维度上减半，对卷积层输出的空间数据进行池化，采用的池化策略是最大值池化（图像识别领域，主要使用Max池化）；Flatten 层用来将输入 “压平”，即把多维的输入一维化，常用在从卷积层到全连接层的过渡。Flatten 不影响 batch 的大小
+- [Dense](https://blog.csdn.net/m0_37592397/article/details/79982601)常用的全连接层，将卷积层和池化层提取出来的特征进行组合，得到更加好的输出，一般除了最后一层需要使用softmax其他层的激活函数都是用relu
+- [model.compile](https://blog.csdn.net/weixin_38145317/article/details/89349013)训练之前需要先编译，model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])，剩余优化器和损失模型没有学习
+- baseline model：通常仅为两层全连接层，输入为所有的像素点，输出为目标分类个数即num_classes，输出层的激活函数为softmax，拟合模型fit时一般batch_size=128
+- [多进程](https://juejin.cn/post/6844903838000873485)使用multiprocessing即可，在完成一个进程以后自动关闭该进程，防止GPU显存占用不释放的情况。需要共享数据的话可以使用manager。
+
+
+#### pytorch [60分钟入门](https://zhuanlan.zhihu.com/p/25572330)
+- from __future__ import print_function 因为python2.X 中 print 不需要括号，而在 python3.X 中则需要，所以开头加入这句话以后，print必须要加括号。
+
 ```
+1.数据预处理
+2.定义网络
+3.定义损失函数和优化方式
+4.forward实现
+5.计算损失loss
+6.backward以更新参数
+7.运行测试集数据观察效果
+8.保存模型
 
 
-
-
+```
 
 
 
