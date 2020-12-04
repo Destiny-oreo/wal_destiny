@@ -40,6 +40,9 @@
 - %matplotlib inline #为了在jupyter notebook里面作图才需要这个命令 可以省略掉plt.show()命令
 - [pickle模块封装读取](https://www.cnblogs.com/lincappu/p/8296078.html)
 - [pip和conda区别](https://blog.csdn.net/weixin_38267508/article/details/83345131)1.都是包管理器，conda时通用的，可以管理任何语言的包，pip主要管理python包；2.conda安装的库会放在pkgs目录下，其他环境需要这个库时候可以直接复制不用重新下载，卸载时候两者作用类似，但是再次下载时候依然可以从pkgs里面复制出来，conda 在指定环境下安装包：$conda install -n env_name pandas；3.conda安装的都是编译好的二进制包，不需要自己编译，pip需要以来系统的编译器
+- list.extend函数，在lsit的末尾追加另一个序列的全部内容
+- PIL.Image.open()可以打开参数中路径的图片
+- [PIL](https://blog.csdn.net/leemboy/article/details/83792729) (Python Image Library) 是 Python 平台处理图片的事实标准
 
 
 #### [tensorflow](https://blog.csdn.net/qq_16137569/article/details/72802387)
@@ -129,10 +132,27 @@ print("The accuracy of the model is %f" % (true_num/len(result_bool)))
 6.backward以更新参数
 7.运行测试集数据观察效果
 8.保存模型
-
+```
+- [transforms22个方法](https://zhuanlan.zhihu.com/p/53367135)transforms.Compose 将多种组合操作放在一起，一般是将数据转换为tensor类型同时进行归一化，transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))是将三个通道的数据归一化为-1到1之间。[其他方法](https://zhuanlan.zhihu.com/p/130985895)
+- [DataLoader参数](https://zhuanlan.zhihu.com/p/30934236)num_worker时多线程方法
+- [enumerate](https://blog.csdn.net/IAMoldpan/article/details/78487809)对可迭代的数据进行标号并将其里面的数据和标号一并打印出来
+- [nn.Conv2d参数](https://www.cnblogs.com/siyuan1998/p/10809646.html)一般只需要in_channels，out_channels，kernel_size三个参数
+ 
+##### 码农家园-微软数据集resnet18训练
+- [visdom的显示错误](https://blog.csdn.net/weixin_42690752/article/details/103936259)安装完visdom以后需要运行python -m visdom.server来激活服务器才能正常运行，否则一直报错。
+- transforms.Resize(256) 是按照比例把图像最小的一个边长放缩到 256，另一边按照相同比例放缩
+- ImageFolder 假设所有的文件按文件夹保存好，每个文件夹下面存贮同一类别的图片，文件夹的名字为分类的名字,之后再传给DataLoader即可
+- [18个损失函数](https://zhuanlan.zhihu.com/p/61379965)常用CrossEntropyLoss
+- [torchvision.models介绍](https://blog.csdn.net/u014380165/article/details/79119664)提高了常用网络结构，并提供了预训练模型；最后一般选择修改网络最后的[全连接层输出](https://blog.csdn.net/jeremy_lf/article/details/104744809)
 
 ```
+思路：
+1.使用shutil包将train里各个分类的数据移出10%到test数据集中以作测试用，主要使用到os.path.join来合并路径，os.listdir访问路径下所有文件名称，shutil.move(sourceFile,dstFile)，文件名称为具体的路径。
+2.使用PIL来读取图片，首先获取所有文件名的列表，然后合并到新的列表中（路径需要和图片名称join起来），然后选择部分图片进行显示，读取方法是使用PIL.open来获得图片名称对应的图片数据，然后pil.show即可。
+3.所有预处理完成以后，开始考虑模型建立，首先导入必要的包，如torch torchvision.datasets/transforms torch.utils.data.DataLoader torch.nn torch.nn.functional torch.optim torchvision.models，其中models包含已经训练好的模型，可以直接使用。还导入了可视化工具visdom，使用稍微麻烦一点点，需要激活服务器才可以正常显示。
+4.
 
+```
 
 
 
