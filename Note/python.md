@@ -83,4 +83,25 @@ df.plot(kind="bar",stacked=True) ##注意哪个才是x轴，分类依据，stack
 - [启用警告](https://www.coder.work/article/1263350)
 
 
+### 爬虫
+#### [requests库](https://www.cnblogs.com/wkfvawl/p/9496323.html)
+- 7个方法
 
+```
+1.requests.request():构造一个请求，支撑以下各方法的基础方法
+2.requests.get():获取HTML网页的主要方法，主要对应于HTTP的GET
+3.requests.post():向HTML网页提交POST请求的方法，对应于HTTP的POST
+4.resquests.head():获取HTML网页头信息的方法，对应于HTTP的HEAD
+5.requests.put():向HTML网页提交PUT请求的方法，对应于HTTP的PUT
+6.requests.patch():向HTML网页提交局部修改请求，对应于HTTP的PATCH
+7.requests.delete():向HTML网页提交删除请求，对应于HTTP的DELETE
+Response的5个对象属性：
+r.status_code	HTTP 请求的返回状态，200 表示连接成功，404 表示失败
+r.text	HTTP 响应内容的字符串形式，即，url 对应的页面内容
+r.encoding	从 HTTP header 中猜测的响应内容编码方式
+r.apparent_encoding	从内容中分析出的响应内容编码方式（备选编码方式）
+r.content	HTTP 响应内容的二进制形式（图片的还原）
+```
+
+#### [lxml](https://wangxin1248.github.io/python/2018/08/python3-spider-4.html)
+- Xpath用来查找HTML节点或者元素，是一门在XML文档中查找信息的语言，在使用Xpath之前需要把HTML文档转为XML文档，使用的是etree包下的HTML方法来实现。
