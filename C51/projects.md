@@ -30,3 +30,22 @@
 ## pytorch-MNIST
 - MNIST学习笔记主要见书签：学习-python-pytorch中关于mnist的笔记；
 - 思路：首先加载数据，compose-MNIST-DataLoader;然后定义神经网络层，函数中可以选择不同的网络层以达到不同的效果；接着定义模型训练的相关参数如学习率、损失函数、优化器等，然后选择CPU还是GPU训练；最后定义迭代次数开始训练并保存准确率以及损失。
+
+
+
+
+## OpenPose
+- 在安装好python和CUDA和Cudnn的基础上，直接下载openpose文件以及cmake1.19，然后准备编译，第一次使用了VS2019编译，所以可能才能下载好所有需要模型吧，build一定要放入父目录下，否则后面的example无法运行；
+- 切换VS工作模式为release，编译OpenPoseDemo以及pyopenpose两个文件生成所需文件
+- 重装anaconda：在python3.8.3下面编译完成openpose以后，发现无法使用其他深度学习包，所以准备重装python，在anaconda里使用conda install python以及，发现只是新建了虚拟环境，每次使用都需要activate才行，而且重新编译的文件在jupyter里无法使用，尝试了无数方法还是无法解决，遂卸载anaconda，卸载完成以后发现环境变量没有删除，手动删除（此处大坑），下载安装对应python3.6的anaconda5.2.0，发现cmd无法打开（不知道什么原因导致），查了解决解决办法为WIN+R 输入regredit，找到网上要求的某一个目录下删除exit的数据，被删除数据为（if exsit），然后发现安装anaconda发现还是没有添加环境变量，还好手动删除时留了一个印象，去网上比对着重新手动添加环境变量，anaconda打开正常。
+- open pose验证：首先VS里两个文件成功生成解决方案，然后将example下的C++样例设为启动项，编译运行成功，说明C++下可以调用openpose；下面验证python下调用pyopenpose，第一种方案，cmd将工作路径切换到python样例下（d:  cd d/xxx),然后python 01xxx.py即可；第二种方案，将必须的文件（参考[视频教程](https://www.bilibili.com/video/av667869379))移入BIN中，然后cmd切换工作路径到bin里，使用官方方法验证，如OpenPoseDemo.exe --video video.avi即可 或者验证图片集，同时可以进入python并import pyopenpose；第三种方案：首先还原jupyter默认工作路径，然后在bin中写脚步cd %cd%    jupyter notebook，目的是在此环境中启动jupyter，然后成功i吗port pyopenpose。
+
+
+
+
+
+
+
+
+
+

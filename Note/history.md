@@ -41,3 +41,20 @@
 
 ## 元 明 清
 
+
+
+
+http://posefs1.perception.cs.cmu.edu/OpenPose/models/body_25/pose_iter_584000.caffemodel
+
+
+
+http://posefs1.perception.cs.cmu.edu/OpenPose/models/coco/pose_iter_440000.caffemodel
+
+
+http://posefs1.perception.cs.cmu.edu/OpenPose/models/mpi/pose_iter_160000.caffemodel
+
+
+http://posefs1.perception.cs.cmu.edu/OpenPose/models/pose_iter_116000.caffemodel
+
+
+http://posefs1.perception.cs.cmu.edu/OpenPose/models/pose_iter_102000.caffemodel
