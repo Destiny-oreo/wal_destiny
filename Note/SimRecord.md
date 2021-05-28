@@ -119,4 +119,25 @@
   
   ```
 
+  ## GitHub
+
+- 初始化等 Destiny-oreo wang1997 wal_destiny
+
+  ```python
+  # 远程仓库同步至本地
+  git init # 初始化
+  git remote add origin https://github.com/Destiny-oreo/wal_destiny.git
+  git pull https://github.com/Destiny-oreo/wal_destiny.git
+  # 远程仓库更改 本地同步 （远程仓库新建文件 最后输入/以新建文件夹 然后创建一个空文件保存）
+  git fetch origin # 获得远程更新
+  git merge origin/master # 更新内容合并到本地分支
+  git push --set-upstream origin master # 建立与上游的跟踪
+  # 常用提交等代码
+  git status
+  git add Note/SimRecord.md
+  git commit -m "add some new files"
+  git push origin  或   git push -u origin master
+  ```
+
   
+
