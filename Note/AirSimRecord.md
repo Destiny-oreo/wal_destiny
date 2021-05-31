@@ -114,8 +114,9 @@
   .takeoffAsync().join() # 起飞至地面3m以上
   confirmConnection # 检查连接状态
   armDisarm # 解锁或上锁
-  
-  
+  client.moveToPositionAsync(x,y,z,velocity,timeout_sec)# 全局坐标系下的三维位置坐标
+  np.linalg.norm：默认参数，矩阵整体元素平方和开根号
+  math.atan和math.atan2:反正切，推荐atan2，输入两个参数y x，不需要判断x是否为0(pi/2)
   
   ```
 
@@ -125,6 +126,7 @@
 
   ```python
   # 远程仓库同步至本地
+  git config --list
   git init # 初始化
   git remote add origin https://github.com/Destiny-oreo/wal_destiny.git
   git pull https://github.com/Destiny-oreo/wal_destiny.git
@@ -134,7 +136,7 @@
   git push --set-upstream origin master # 建立与上游的跟踪
   # 常用提交等代码
   git status
-  git add Note/SimRecord.md
+  git add Note/SimRecord.md  或 git add .
   git commit -m "add some new files"
   git push origin  或   git push -u origin master
   ```
