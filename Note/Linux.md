@@ -32,7 +32,19 @@ du：计算文件和目录的占用空间
 - 存在问题：EasyBCD删除ubuntu选项 且window自动启动取消等待；删除卷 扩展卷；删除grub页面  但是系统启动文件一直没有彻底删除 准备使用最复杂得EasyUEFI方法但是却无法安装 今日暂时放弃  后面有心气捯饬时候再说  mbrfix为了修复mbr使用 好像无效；Rufus_V3.12.1710烧录镜像文件 WIN10不需要；EasyBCD-2.2.exe 建立从WINDOWS进入ubuntu得启动项；uiso9_cn.exe rufus得替代品 也是烧录软件 没有用到 毕竟rufus是官方推荐使用
 - WIN7+Ubuntu：使用ultroiso制作U盘启动盘，直接使用WIN10时制作的启动盘没有效果，制作完成压缩盘，由于是双系统，所以为了引导盘需要单独设立一个/boot分区，且需要和WIN引导盘在一起，所以C盘压缩出来250M左右作为引导盘，E盘压缩出来52个G作为Ubuntu磁盘；重启按F12进入BIOS，选择U盘 HDD，开始安装，一切正常，分盘时主分区需要最后一步划分，首先4G的交换分区，不需要挂载，然后20G的/分区，剩余32G的/home分区用于存放文件，最后250M的/boot主分区，用于存放引导程序，最下面选择/boot分区。重启以后进入Windows，打开EasyBCD添加引导项即可。
 
+#### 解决boot空间不足
 
+- 每当系统升级时，旧的内核不会被清理，boot一共就250M不到，内存不足时需要卸载旧的版本内核
+
+  ```python
+  dpkg --get-selections |grep linux-image # 查看已安装的内核版本
+  uname -a # 查看系统当前使用的内核版本
+  sudo apt purge linux-image-5.8.0-50-generic # 删除旧的内核版本 不能删除新的
+  # sudo dpkg -P linux-image-extra-4.4.0-31-generic # 卸载残留信息
+  df # 查看内存剩余情况 查看最右一列/boot
+  ```
+
+  
 
 ### PS
 #### 常用命令
