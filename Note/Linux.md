@@ -40,10 +40,13 @@ du：计算文件和目录的占用空间
   dpkg --get-selections |grep linux-image # 查看已安装的内核版本
   uname -a # 查看系统当前使用的内核版本
   sudo apt purge linux-image-5.8.0-50-generic # 删除旧的内核版本 不能删除新的
+  无法卸载时sudo mv /boot/initrd.img-5.8.0-53-generic /home/wal/software/Files/TempBoot
+  sudo apt purge linux-image-5.8.0-53-generic linux-image-5.8.0-55-generic
+  sudo apt --fix-broken install
   # sudo dpkg -P linux-image-extra-4.4.0-31-generic # 卸载残留信息
   df # 查看内存剩余情况 查看最右一列/boot
   ```
-
+  
   
 
 ### PS
