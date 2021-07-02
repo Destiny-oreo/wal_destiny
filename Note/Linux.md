@@ -34,7 +34,7 @@ du：计算文件和目录的占用空间
 
 #### 解决boot空间不足
 
-- 每当系统升级时，旧的内核不会被清理，boot一共就250M不到，内存不足时需要卸载旧的版本内核
+- 每当系统升级时，旧的内核不会被清理，boot一共就250M不到，内存不足时需要卸载旧的版本[内核](https://blog.csdn.net/qq_49814035/article/details/116035670)
 
   ```python
   dpkg --get-selections |grep linux-image # 查看已安装的内核版本
@@ -45,8 +45,39 @@ du：计算文件和目录的占用空间
   sudo apt --fix-broken install
   # sudo dpkg -P linux-image-extra-4.4.0-31-generic # 卸载残留信息
   df # 查看内存剩余情况 查看最右一列/boot
+  
+  #显卡驱动出现问题
+  sudo apt install dkms
+  ls /usr/src | grep nvidia # 查看当前显卡驱动版本 465.27
+  sudo dkms install -m nvidia -v 465.27
+  
+  #设置默认启动内核
+  grub-install --version # 查看当前grub版本 后续使用不同命令 见小标题内核链接
+  grep 'menuentry' /boot/grub/grub.cfg # 查看内核版本
+  sudo gedit /etc/default/grub
+  GRUB_DEFAULT="gnulinux-advanced-ad0d2b4f-68aa-4b9b-ad1b-42289eb944af>gnulinux-5.8.0-59-generic-advanced-ad0d2b4f-68aa-4b9b-ad1b-42289eb944af" # 初始Ubuntu，Linux 4.15.0-33-generic，warning以后再更改
+  sudo update-grub # warning以后再次重复编辑grub
+  sudo reboot
+  
   ```
   
+- 禁止[更新内核](https://blog.csdn.net/weixin_40522162/article/details/80302735) [链接](https://blog.csdn.net/davidhzq/article/details/102651588)
+
+  ```python
+  # 禁止更新
+  sudo apt-mark hold linux-image-5.8.0-59-generic
+  [sudo] wal 的密码： 
+  linux-image-5.8.0-59-generic 设置为保留。
+  # 禁止更新内核，需时间来验证
+  sudo apt-mark hold linux-image-x.xx.x-xx-generic
+  sudo apt-mark hold linux-image-extra-x.xx.x-xx-generic
+  # 如果需要恢复原来的设定的话即允许更新内核，执行如下命令即可：
+  sudo apt-mark unhold linux-image-x.xx.x-xx-generic
+  sudo apt-mark unhold linux-image-extra-x.xx.x-xx-generic
+  另外 根据链接 选择软件与更新中的从不 提醒新版本更新
+  
+  ```
+
   
 
 ### PS
