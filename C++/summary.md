@@ -3,7 +3,7 @@
 ---------------------------
 ## 二分
 [leetcode 29两数相除](https://leetcode-cn.com/problems/divide-two-integers/)--[笔记](D:\software\0FILES\GROUP1\GitBranch\wal_destiny\leetcode\29-divide-two-integers.md)将两数相除，要求不使用乘法、除法和 mod 运算符计算商，需要截去小数部分。（二分思想）
-[leetcode 29两数相除](https://leetcode-cn.com/problems/divide-two-integers/)--[笔记](..\leetcode\29-divide-two-integers.md)将两数相除，要求不使用乘法、除法和 mod 运算符计算商，需要截去小数部分。（二分思想）
+[leetcode 29两数相除](https://leetcode-cn.com/problems/divide-two-integers/)--[笔记](../leetcode/29-divide-two-integers.md)将两数相除，要求不使用乘法、除法和 mod 运算符计算商，需要截去小数部分。（二分思想）
 [leetcode 33在有序但旋转过的数组中搜索目标](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)--[笔记](D:\software\0FILES\GROUP1\GitBranch\wal_destiny\leetcode\33-search-in-rotated-sorted-array.md)假设按照升序排序的数组在预先未知的某个点上进行了旋转，寻找目标数字的下标（改进的二分查找）
 [leetcode 34寻找目标值在数组中的开始和结束位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)--[笔记](D:\software\0FILES\GROUP1\GitBranch\wal_destiny\leetcode\34-find-first-and-last-position-of-element-in-sorted-array.md)给定一个按照升序排列的重复整数数组 nums，和一个目标值 target。找出给定目标值在数组中的开始位置和结束位置。（循环边界二分查找）
 [leetcode 35在有序数组中找到目标下标或待插入下标](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)--[笔记](D:\software\0FILES\GROUP1\GitBranch\wal_destiny\leetcode\35-search-in-rotated-sorted-array.md)给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。
