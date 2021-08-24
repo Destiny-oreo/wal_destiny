@@ -87,7 +87,7 @@ df.plot(kind="bar",stacked=True) ##注意哪个才是x轴，分类依据，stack
 #### [requests库](https://www.cnblogs.com/wkfvawl/p/9496323.html)
 - 7个方法
 
-```
+```python
 1.requests.request():构造一个请求，支撑以下各方法的基础方法
 2.requests.get():获取HTML网页的主要方法，主要对应于HTTP的GET
 3.requests.post():向HTML网页提交POST请求的方法，对应于HTTP的POST
@@ -105,3 +105,35 @@ r.content	HTTP 响应内容的二进制形式（图片的还原）
 
 #### [lxml](https://wangxin1248.github.io/python/2018/08/python3-spider-4.html)
 - Xpath用来查找HTML节点或者元素，是一门在XML文档中查找信息的语言，在使用Xpath之前需要把HTML文档转为XML文档，使用的是etree包下的HTML方法来实现。
+
+
+
+### [多线程](https://www.cnblogs.com/lilyxiaoyy/p/12054441.html)
+
+```python
+import time
+from threading import Thread
+
+class MyThread(Thread):
+	def __init__(self,name):
+		super(MyThread,self).__init__()
+        self.name = name
+        
+    def run(self):
+        print(f"{self.name}开始")
+        time.sleep(0.2)
+        print(f"{self.name}结束")
+        
+if __name__ == 'main':
+    t1 = MyThread("线程1")
+    t2 = MyThread("线程2")
+    t1.start()
+    t2.start()
+    print("主线程执行结束，子线程是依附于主线程存在的，所以，子线程都结束后，主线程才真正的结束")
+
+
+
+```
+
+
+

@@ -107,7 +107,7 @@ result_bool = numpy.equal(result_max, test_max)
 true_num = numpy.sum(result_bool)
 print("")
 print("The accuracy of the model is %f" % (true_num/len(result_bool))) 
-``` 
+```
 - [ImageDataGenerator](https://blog.csdn.net/qq_27825451/article/details/90056896)图片生成器，一次一个批次的喂给模型训练，同时适时对数据增强处理
 - [model.fit_generator()和model.fit()](https://www.jb51.net/article/188900.htm)数据量大的时候需要使用batch来进行fit_generator训练，生成器与模型同时运行提高了效率，[两者的区别](https://blog.csdn.net/learning_tortosie/article/details/85243310)
 - 卷积神经网络CNN：有效地减少全连接神经网络参数量太大的问题，[搭建过程](https://zhuanlan.zhihu.com/p/53790130)
@@ -137,7 +137,9 @@ print("The accuracy of the model is %f" % (true_num/len(result_bool)))
 - [DataLoader参数](https://zhuanlan.zhihu.com/p/30934236)num_worker时多线程方法
 - [enumerate](https://blog.csdn.net/IAMoldpan/article/details/78487809)对可迭代的数据进行标号并将其里面的数据和标号一并打印出来
 - [nn.Conv2d参数](https://www.cnblogs.com/siyuan1998/p/10809646.html)一般只需要in_channels，out_channels，kernel_size三个参数
- 
+
+
+
 ##### 码农家园-微软数据集resnet18训练
 - [visdom的显示错误](https://blog.csdn.net/weixin_42690752/article/details/103936259)安装完visdom以后需要运行python -m visdom.server来激活服务器才能正常运行，否则一直报错。
 - transforms.Resize(256) 是按照比例把图像最小的一个边长放缩到 256，另一边按照相同比例放缩
@@ -154,8 +156,9 @@ print("The accuracy of the model is %f" % (true_num/len(result_bool)))
 
 ```
 
+#### 学习笔记
 
-
+- 多进程和多线程区别：进程是资源分配的最小单位，线程是CPU调度的最小单位。多进程中占用内存多，切换复杂，CPU 利用率低；多线程中占用内存少，切换简单，CPU 利用率高。多进程中编程简单，调试简单；多线程中编程复杂，调试复杂。多进程中进程间不会相互影响；多线程中一个线程挂掉将导致整个进程挂掉。
 
 
 

@@ -19,8 +19,10 @@ top() 返回栈顶元素，不删除（获取）
 vector封装数组，list封装了链表，map和set封装了二叉树,set元素唯一，即使重复插入也不会多次计数，lower_bound显示小于等于 upper大于，find显示下标，默认升序排列   
 [自定义比较函数](https://www.cnblogs.com/xjyxp/p/11447091.html)不适用friend只能有一个参数，使用friend以后才可以传入两个参数进行[重载](https://www.cnblogs.com/lengbingshy/p/3491192.html)
 include < set>；  
-set<int/char/string/基本数据类型/自定义类型/结构体类型/.....>iset   
-```	set<infos> s;
+set<int/char/string/基本数据类型/自定义类型/结构体类型/.....>iset 
+  
+```	
+set<infos> s;
 	for (int i = 0; i < dn.size(); i++) {
 		infos temp;
 		temp.po = dn[i];
