@@ -253,6 +253,7 @@
   输出airsim_rect中z,y,z采用airsim全局NED坐标系，即以起始无人机坐标点作为原点，飞行过程中的坐标点均已此原点计算，如经过起始起飞点则为0；检查到creat_data中读取原始图片以后没有sort()，修正以后误差主要是-x偏移半个车位，-z偏移1m左右；
   # 6.30
   数据集组成：
+  第1位：car   第2位：采样次数  第3位：接力上一次样本个数
   000000-000616  car1绕圈半径11.8m
   300000-300175  car3绕圈半径10.6-12m
   310000-310216  car3绕圈半径13.5m
@@ -270,12 +271,22 @@
   2.标签再检查，防止微调；
   3.数据增强尝试，将图片旋转并改变label的某些值；
   4.将车的模型导入到3D软件中进行建模，使用相机进行录制也可以，取消无人机的操作可能可以增加数据的准确率，固定车子的角度改变相机距离等；
+  5.输出smoke训练准确度，再读SMOKE训练代码；
+  ```
   
+  ```python
+  # 7.8
+  1.解决无人机自旋问题，切向速度与径向速度的比值，降低无人机飞行速度主要是绕圆速度
+  2.3米高度采集3179张样本，但标签暂时未解决，首先改内参，再试高度以及图片保存格式问题
   
-  
+  #7.9 后续见GroupMeeting.md
   ```
   
   
+
+
+
+
 
 
 
@@ -309,14 +320,14 @@
 
 ### 安装[多版本CUDA](https://blog.csdn.net/yinxingtianxia/article/details/80462892) 以及切换：
 
-- 命令：
+- 命令：(安装时驱动前面的×需要取消) 8707 wang.
 
   ```python
   # 查看CUDA以及CUDNN版本
   cat /usr/local/cuda/version.txt     或者   nvcc --version
   cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
   stat cuda # 查看当前软链接指向位置
-  # 安装10.0.130+6.0.21   10.1.105+7.6.4.38  9.0.176+7.6.4.38
+  # 安装10.0.130+6.0.21   10.1.105+7.6.4.38  9.0.176+7.6.4.38 10.2+8.0.5 sample在document
   sudo cp cuda/include/cudnn.h /usr/local/cuda-10.0/include
   sudo cp cuda/lib64/libcudnn* /usr/local/cuda-10.0/lib64
   sudo chmod a+r /usr/local/cuda-10.0/include/cudnn.h 
@@ -366,5 +377,22 @@
   git push origin  或   git push -u origin master
   ```
 
+- 安装[OpenCV](https://www.jianshu.com/p/3c15a1ad3ec6)和[OpenCV_conttib](https://www.dazhuanlan.com/2019/08/15/5d55132cf05be/)
+
+  ```python
+  cmake -D CMAKE_BUILD_TYPE=RELEASE \
+      -D CMAKE_INSTALL_PREFIX=/usr/local \
+      -D INSTALL_C_EXAMPLES=ON \
+      -D INSTALL_PYTHON_EXAMPLES=ON \
+      -D OPENCV_GENERATE_PKGCONFIG=ON \
+      -D OPENCV_EXTRA_MODULES_PATH=/home/wal/software/apps/opencv_build/opencv_contrib-3.4.14/modules \
+      -D BUILD_EXAMPLES=ON ..
+  # yoloV4安装笔记
+  1.git clone 环境要求中cmake>3.18 opencv>2.14 cuda>=10.2 cudnn>=8.0.2
+  2.cmake下载高版本git源3.20.5，使用源需要编译等，使用二进制只需要在bashrc里添加路径即可；
+  3.下载，编译contrib库，其中path使用绝对路径后成功，其中安装opencv需要python相关库
+  4.先下载了UCDA11.0后改成10.2，driver前的×一定要取消，8.0以上的cudnn好像无法使用命令查看版本，需要使用样例来检测
+  ```
+  
   
 
