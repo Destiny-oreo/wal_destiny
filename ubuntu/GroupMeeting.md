@@ -90,7 +90,13 @@
   
   # 7.21
   1.数据集中车辆不可以被截断和遮挡
-  2.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   Github token -2021-11-26
+  
+  
+  
+  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  
+  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    Github token -2021-11-24
+  git config --global credential.helper store
+  
   ```
 
 - **mono_3d代码笔记**
