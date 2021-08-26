@@ -14,7 +14,7 @@ rm：删除文件和目录
 mv：移动或者重命名文件和目录
 find：搜索文件和目录
 du：计算文件和目录的占用空间
-
+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 git
 ```
 #### Linux系统简介
 - 芬兰大学生李纳斯自己的unix，成为linux；
