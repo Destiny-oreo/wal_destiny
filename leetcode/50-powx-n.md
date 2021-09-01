@@ -1,5 +1,5 @@
 # 题目链接
-[leetcode 50](https://leetcode-cn.com/problems/powx-n/)pow(x,n)
+[leetcode 50](https://leetcode-cn.com/problems/powx-n/)  pow(x,n)
 
 # 原文
 实现 pow(x, n) ，即计算 x 的 n 次幂函数。  
