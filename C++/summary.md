@@ -1,5 +1,5 @@
 # 算法整理     
-92开始
+114结束
 ---------------------------
 ## 二分
 [leetcode 29两数相除](https://leetcode-cn.com/problems/divide-two-integers/)--[笔记](../leetcode/29-divide-two-integers.md)将两数相除，要求不使用乘法、除法和 mod 运算符计算商，需要截去小数部分。（二分思想）
@@ -38,11 +38,20 @@
 [leetcode 90子串集2](https://leetcode-cn.com/problems/subsets-ii/)--[笔记](../leetcode/90-subsets-ii.md)给定一个可能包含重复元素的整数数组 nums，返回该数组所有可能的子集（幂集）（除了set查重，可以尝试visited来判断-待尝试
 [leetcode 94中序遍历二叉树](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)--[笔记](../leetcode/94-binary-tree-inorder-traversal.md)给定一个二叉树，返回它的中序 遍历。
 [leetcode 98有效的二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/)--[笔记](../leetcode/98-validate-binary-search-tree.md)给定一个二叉树，判断其是否是一个有效的二叉搜索树。（递归中序 迭代栈）
+[leetcode 104二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/)--[笔记](../leetcode/104-maximum-depth-of-binary-tree.md)给定一个二叉树，找出其最大深度。——深搜 迭代
+[leetcode 105前序+中序构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)--[笔记](../leetcode/105-construct-binary-tree-from-preorder-and-inorder-traversal.md)根据一棵树的前序遍历与中序遍历构造二叉树（无重复元素）
+[leetcode 110平衡二叉树](https://leetcode-cn.com/problems/balanced-binary-tree/)--[笔记](../leetcode/110-balanced-binary-tree.md)给定一个二叉树，判断它是否是高度平衡的二叉树。（待优化）
+[leetcode 111二叉树的最小深度](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/)--[笔记](../leetcode/111-minimum-depth-of-binary-tree.md)给定一个二叉树，找出其最小深度。
+[leetcode 112目标和子路径](https://leetcode-cn.com/problems/path-sum/submissions/)--[笔记](../leetcode/112-submissions.md)给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。
+[leetcode 114展开二叉树为链表](https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/)--[笔记](../leetcode/114-flatten-binary-tree-to-linked-list.md)给定一个二叉树，原地将它展开为链表。
+
 
 
 ## BFS+递归-层次遍历
 [leetcode 22生成括号？](https://leetcode-cn.com/problems/generate-parentheses/)--[笔记](../leetcode/22-generate-parentheses.md)给出 n 代表生成括号的对数，写出一个函数使其能够生成所有可能的并且有效的括号组合，"((()))"...
 [leetcode 78不重复的子集](https://leetcode-cn.com/problems/subsets/)--[笔记](../leetcode/78-subsets.md)给定一组不含重复元素的整数数组 nums，返回该数组所有可能的子集（幂集）。
+[leetcode 104二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/)--[笔记](../leetcode/104-maximum-depth-of-binary-tree.md)给定一个二叉树，找出其最大深度。——深搜 迭代
+[leetcode 111二叉树的最小深度](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/)--[笔记](../leetcode/111-minimum-depth-of-binary-tree.md)给定一个二叉树，找出其最小深度。
 
 
 ## 动态规划
@@ -63,13 +72,26 @@
 [leetcode 14最长公共前缀](https://leetcode-cn.com/problems/longest-common-prefix/)--[笔记](../leetcode/14-longest-common-prefix.md)查找字符串数组中的最长公共前缀子串，不存在返回""
 [leetcode 28实现 strStr()](https://leetcode-cn.com/problems/implement-strstr/)--[笔记](../leetcode/28-implement-strstr.md)在haystack字符串中找出needle字符串出现的第一个位置 (从0开始)。如果不存在，则返回-1.
 [leetcode 38报数序列](https://leetcode-cn.com/problems/count-and-say/)--[笔记](../leetcode/38-count-and-say.md)报数序列是一个整数序列，按照其中的整数的顺序进行报数，得到下一个数
-[leetcode 43字符串相乘](https://leetcode-cn.com/problems/multiply-strings/)--[笔记](../leetcode/43-multiply-strings.md)给定两个以字符串形式表示的非负整数 num1 和 num2，返回 num1 和 num2 的乘积，它们的乘积也表示为字符串形式。 
+[leetcode 43字符串相乘](https://leetcode-cn.com/problems/multiply-strings/)--[笔记](../leetcode/43-multiply-strings.md)给定两个以字符串形式表示的非负整数 num1 和 num2，返回 num1 和 num2 的乘积，它们的乘积也表示为字符串形式。
+ 
 
 ## 二叉树
 [leetcode 94中序遍历二叉树](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)--[笔记](../leetcode/94-binary-tree-inorder-traversal.md)给定一个二叉树，返回它的中序 遍历。
 [leetcode 95独特的二叉搜索树2](https://leetcode-cn.com/problems/unique-binary-search-trees-ii/)--[笔记](../leetcode/95-unique-binary-search-trees-ii.md)给定一个整数 n，生成所有由 1 ... n 为节点所组成的 二叉搜索树 。
 [leetcode 96二叉搜索树](https://leetcode-cn.com/problems/unique-binary-search-trees/)--[笔记](../leetcode/96-unique-binary-search-trees.md)给定一个整数 n，求以 1 ... n 为节点组成的二叉搜索树有多少种？
 [leetcode 98有效的二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/)--[笔记](../leetcode/98-validate-binary-search-tree.md)给定一个二叉树，判断其是否是一个有效的二叉搜索树。（递归中序 迭代栈）
+[leetcode 100相同的二叉树](https://leetcode-cn.com/problems/same-tree/)--[笔记](../leetcode/100-same-tree.md)给定两个二叉树，编写一个函数来检验它们是否相同。 
+[leetcode 101对称的二叉树](https://leetcode-cn.com/problems/symmetric-tree/)--[笔记](../leetcode/101-symmetric-tree.md)给定一个二叉树，检查它是否是镜像对称的。
+[leetcode 102层次遍历所有节点](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/)--[笔记](../leetcode/102-binary-tree-level-order-traversal.md)给定一个二叉树，返回其按层次遍历的节点值。 （即逐层地，从左到右访问所有节点）。
+[leetcode 104二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/)--[笔记](../leetcode/104-maximum-depth-of-binary-tree.md)给定一个二叉树找出最大深度——深搜 迭代
+[leetcode 105前序+中序构造二叉树](https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)--[笔记](../leetcode/105-construct-binary-tree-from-preorder-and-inorder-traversal.md)根据一棵树的前序遍历与中序遍历构造二叉树（无重复元素）
+[leetcode 107二叉树的层次遍历 II](https://leetcode-cn.com/problems/binary-tree-level-order-traversal-ii/)--[笔记](../leetcode/107-binary-tree-level-order-traversal-ii.md)给定一个二叉树，返回其节点值自底向上的层次遍历。 （即按从叶子节点所在层到根节点所在的层，逐层从左向右遍历） 
+[leetcode 109链表转为平衡二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-list-to-binary-search-tree/)--[笔记](../leetcode/109-convert-sorted-list-to-binary-search-tree.md)给定一个单链表，其中的元素按升序排序，将其转换为高度平衡的二叉搜索树。
+[leetcode 110平衡二叉树](https://leetcode-cn.com/problems/balanced-binary-tree/)--[笔记](../leetcode/110-balanced-binary-tree.md)给定一个二叉树，判断它是否是高度平衡的二叉树。（待优化）
+[leetcode 111二叉树的最小深度](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/)--[笔记](../leetcode/111-minimum-depth-of-binary-tree.md)给定一个二叉树，找出其最小深度。
+[leetcode 112目标和子路径](https://leetcode-cn.com/problems/path-sum/submissions/)--[笔记](../leetcode/112-submissions.md)给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。
+[leetcode 114展开二叉树为链表](https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/)--[笔记](../leetcode/114-flatten-binary-tree-to-linked-list.md)给定一个二叉树，原地将它展开为链表。
+
 
 
 ## 位运算
@@ -79,6 +101,7 @@
 [leetcode 20有效的符号](https://leetcode-cn.com/problems/valid-parentheses/)--[笔记](../leetcode/20-valid-parentheses.md)给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
 [leetcode 94中序遍历二叉树](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)--[笔记](../leetcode/94-binary-tree-inorder-traversal.md)给定一个二叉树，返回它的中序 遍历。
 [leetcode 98有效的二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/)--[笔记](../leetcode/98-validate-binary-search-tree.md)给定一个二叉树，判断其是否是一个有效的二叉搜索树。（递归中序 迭代栈）
+[leetcode 114展开二叉树为链表](https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/)--[笔记](../leetcode/114-flatten-binary-tree-to-linked-list.md)给定一个二叉树，原地将它展开为链表。
 
 ## 链表
 [leetcode2两数相加](https://leetcode-cn.com/problems/add-two-numbers/)--[笔记](../leetcode/2-add-two-numbers.md)两个非空的链表逆序存储进行相加
@@ -87,7 +110,7 @@
 [leetcode 24两两交换节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/)--[笔记](../leetcode/24-swap-nodes-in-pairs.md)两两交换给定链表其中相邻的节点，并返回交换后的链表。
 [leetcode 83删除有序链表中重复节点](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)--[笔记](../leetcode/83-remove-duplicates-from-sorted-list.md)给定一个排序链表，删除所有重复的元素，使得每个元素只出现一次。
 [leetcode 86链表排序](https://leetcode-cn.com/problems/partition-list/)--[笔记](../leetcode/86-partition-list.md)给定一个链表和一个特定值 x，对链表进行分隔，使得所有小于 x 的节点都在大于或等于 x 的节点之前，需要保留两个分区中每个节点的相对位置。
-
+[leetcode 109链表转为平衡二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-list-to-binary-search-tree/)--[笔记](../leetcode/109-convert-sorted-list-to-binary-search-tree.md)给定一个单链表，其中的元素按升序排序，将其转换为高度平衡的二叉搜索树。
 
 
 ## 其他
@@ -101,6 +124,7 @@
 
 ### 分治
 [leetcode 23合并k个有序链表](https://leetcode-cn.com/problems/merge-k-sorted-lists/)--[笔记](../leetcode/23-merge-k-sorted-lists.md)合并 k 个排序链表，返回合并后的排序链表（合并时两条链表长度相差不大时速度更快-分治）
+[leetcode 109链表转为平衡二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-list-to-binary-search-tree/)--[笔记](../leetcode/109-convert-sorted-list-to-binary-search-tree.md)给定一个单链表，其中的元素按升序排序，将其转换为高度平衡的二叉搜索树。 
 
 
 ### set
