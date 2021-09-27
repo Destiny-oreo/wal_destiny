@@ -90,7 +90,11 @@
   
   # 7.21
   1.数据集中车辆不可以被截断和遮挡
-  
+  # 9.27（8.27）
+  1.更改原始的7000多数据从多类到一类，查看训练效果
+  2.查看数据的样本
+  3.无人机控制
+  4.将官方样本角度应用到仿真场景  控制变量训练模型
   
   
   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  
@@ -99,7 +103,7 @@
   
   ```
 
-- **mono_3d代码笔记**
+- **mono_3d代码阅读笔记**
 
   ```python
   1./home/wal/project/smoke_mono_3d/smoke/config/defaults.py : 修改阈值
