@@ -1,5 +1,5 @@
 # 算法整理     
-114结束
+130开始
 ---------------------------
 ## 二分
 [leetcode 29两数相除](https://leetcode-cn.com/problems/divide-two-integers/)--[笔记](../leetcode/29-divide-two-integers.md)将两数相除，要求不使用乘法、除法和 mod 运算符计算商，需要截去小数部分。（二分思想）
@@ -20,6 +20,9 @@
 [leetcode 86链表排序](https://leetcode-cn.com/problems/partition-list/)--[笔记](../leetcode/86-partition-list.md)给定一个链表和一个特定值 x，对链表进行分隔，使得所有小于 x 的节点都在大于或等于 x 的节点之前，需要保留两个分区中每个节点的相对位置。
 [leetcode 88合并排序数组](https://leetcode-cn.com/problems/merge-sorted-array/)--[笔记](../leetcode/88-merge-sorted-array.md)给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 num1 成为一个有序数组。 
 [leetcode 92反转部分排序链表2](https://leetcode-cn.com/problems/reverse-linked-list-ii/)--[笔记](../leetcode/92-reverse-linked-list-ii.md)反转从位置 m 到 n 的链表。请使用一趟扫描完成反转。
+[leetcode 141判断链表是否有环](https://leetcode-cn.com/problems/linked-list-cycle/)--[笔记](../leetcode/141-linked-list-cycle.md)给定一个链表，判断链表中是否有环。
+[leetcode 142判断链表是否有环2](https://leetcode-cn.com/problems/linked-list-cycle-ii/)--[笔记](../leetcode/142-linked-list-cycle-ii.md)给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。
+
 
 
 ## 哈希表
@@ -44,6 +47,8 @@
 [leetcode 111二叉树的最小深度](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/)--[笔记](../leetcode/111-minimum-depth-of-binary-tree.md)给定一个二叉树，找出其最小深度。
 [leetcode 112目标和子路径](https://leetcode-cn.com/problems/path-sum/submissions/)--[笔记](../leetcode/112-submissions.md)给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。
 [leetcode 114展开二叉树为链表](https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/)--[笔记](../leetcode/114-flatten-binary-tree-to-linked-list.md)给定一个二叉树，原地将它展开为链表。
+[leetcode 130封闭区域](https://leetcode-cn.com/problems/surrounded-regions/)--[笔记](../leetcode/130-surrounded-regions.md)给定一个二维的矩阵，包含 'X' 和 'O'（字母 O），找到所有被 'X' 围绕的区域，并将这些区域里所有的 'O' 用 'X' 填充。 
+[leetcode 133图的深拷贝](https://leetcode-cn.com/problems/clone-graph/)--[笔记](../leetcode/133-clone-graph.md)给你无向连通图中一个节点的引用，请你返回该图的 深拷贝（克隆）。 
 
 
 
@@ -52,6 +57,8 @@
 [leetcode 78不重复的子集](https://leetcode-cn.com/problems/subsets/)--[笔记](../leetcode/78-subsets.md)给定一组不含重复元素的整数数组 nums，返回该数组所有可能的子集（幂集）。
 [leetcode 104二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/)--[笔记](../leetcode/104-maximum-depth-of-binary-tree.md)给定一个二叉树，找出其最大深度。——深搜 迭代
 [leetcode 111二叉树的最小深度](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/)--[笔记](../leetcode/111-minimum-depth-of-binary-tree.md)给定一个二叉树，找出其最小深度。
+[leetcode 130封闭区域](https://leetcode-cn.com/problems/surrounded-regions/)--[笔记](../leetcode/130-surrounded-regions.md)给定一个二维的矩阵，包含 'X' 和 'O'（字母 O），找到所有被 'X' 围绕的区域，并将这些区域里所有的 'O' 用 'X' 填充。 
+
 
 
 ## 动态规划
@@ -63,6 +70,10 @@
 [leetcode 70爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/)--[笔记](../leetcode/70-climbing-stairs.md)假设你正在爬楼梯。需要 n 阶你才能到达楼顶。每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？
 [leetcode 96二叉搜索树](https://leetcode-cn.com/problems/unique-binary-search-trees/)--[笔记](../leetcode/96-unique-binary-search-trees.md)给定一个整数 n，求以 1 ... n 为节点组成的二叉搜索树有多少种？
 [leetcode 97交错组成字符串](https://leetcode-cn.com/problems/interleaving-string/)--[笔记](../leetcode/97-interleaving-string.md)给定三个字符串 s1, s2, s3, 验证 s3 是否是由 s1 和 s2 交错组成的。 
+[leetcode 121买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)--[笔记](../leetcode/121-best-time-to-buy-and-sell-stock.md)给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。最多只允许完成一笔交易（即买入和卖出一支股票），设计一个算法来计算你所能获取的最大利润。
+
+
+
 
 ## 贪心算法
 [leetcode 55跳跃游戏](https://leetcode-cn.com/problems/jump-game/)--[笔记](../leetcode/55-jump-game.md)给定一个非负整数数组，最初位于数组的第一个位置。数组中的每个元素代表在该位置可以跳跃的最大长度。判断是否能够到达最后一个位置。
@@ -92,10 +103,11 @@
 [leetcode 112目标和子路径](https://leetcode-cn.com/problems/path-sum/submissions/)--[笔记](../leetcode/112-submissions.md)给定一个二叉树和一个目标和，判断该树中是否存在根节点到叶子节点的路径，这条路径上所有节点值相加等于目标和。
 [leetcode 114展开二叉树为链表](https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/)--[笔记](../leetcode/114-flatten-binary-tree-to-linked-list.md)给定一个二叉树，原地将它展开为链表。
 
-
+## 图
+[leetcode 133图的深拷贝](https://leetcode-cn.com/problems/clone-graph/)--[笔记](../leetcode/133-clone-graph.md)给你无向连通图中一个节点的引用，请你返回该图的 深拷贝（克隆）。
 
 ## 位运算
-
+[leetcode 136只出现一次的元素](https://leetcode-cn.com/problems/single-number/)--[笔记](../leetcode/136-single-number.md)给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。
 
 ## 栈和队列
 [leetcode 20有效的符号](https://leetcode-cn.com/problems/valid-parentheses/)--[笔记](../leetcode/20-valid-parentheses.md)给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
@@ -111,7 +123,9 @@
 [leetcode 83删除有序链表中重复节点](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/)--[笔记](../leetcode/83-remove-duplicates-from-sorted-list.md)给定一个排序链表，删除所有重复的元素，使得每个元素只出现一次。
 [leetcode 86链表排序](https://leetcode-cn.com/problems/partition-list/)--[笔记](../leetcode/86-partition-list.md)给定一个链表和一个特定值 x，对链表进行分隔，使得所有小于 x 的节点都在大于或等于 x 的节点之前，需要保留两个分区中每个节点的相对位置。
 [leetcode 109链表转为平衡二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-list-to-binary-search-tree/)--[笔记](../leetcode/109-convert-sorted-list-to-binary-search-tree.md)给定一个单链表，其中的元素按升序排序，将其转换为高度平衡的二叉搜索树。
-
+[leetcode 141判断链表是否有环](https://leetcode-cn.com/problems/linked-list-cycle/)--[笔记](../leetcode/141-linked-list-cycle.md)给定一个链表，判断链表中是否有环。
+[leetcode 142判断链表是否有环2](https://leetcode-cn.com/problems/linked-list-cycle-ii/)--[笔记](../leetcode/142-linked-list-cycle-ii.md)给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。
+[leetcode 148链表排序](https://leetcode-cn.com/problems/sort-list/)--[笔记](../leetcode/148-sort-list.md)在 O(n log n) 时间复杂度和常数级空间复杂度下，对链表进行排序。
 
 ## 其他
 ### 数学运算
@@ -125,7 +139,7 @@
 ### 分治
 [leetcode 23合并k个有序链表](https://leetcode-cn.com/problems/merge-k-sorted-lists/)--[笔记](../leetcode/23-merge-k-sorted-lists.md)合并 k 个排序链表，返回合并后的排序链表（合并时两条链表长度相差不大时速度更快-分治）
 [leetcode 109链表转为平衡二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-list-to-binary-search-tree/)--[笔记](../leetcode/109-convert-sorted-list-to-binary-search-tree.md)给定一个单链表，其中的元素按升序排序，将其转换为高度平衡的二叉搜索树。 
-
+[leetcode 148链表排序](https://leetcode-cn.com/problems/sort-list/)--[笔记](../leetcode/148-sort-list.md)在 O(n log n) 时间复杂度和常数级空间复杂度下，对链表进行排序。
 
 ### set
 [leetcode 40组合求和2不可重复](https://leetcode-cn.com/problems/combination-sum-ii/)--[笔记](../leetcode/40-combination-sum-ii.md)给定一个数组 candidates 和一个目标数 target ，找出 candidates 中所有可以使数字和为 target 的组合，每个数字只能使用一次。
@@ -133,6 +147,6 @@
 ### 找规律
 [leetcode 48旋转图像](https://leetcode-cn.com/problems/rotate-image/)--[笔记](../leetcode/48-rotate-image.md)给定一个 n × n 的二维矩阵表示一个图像，将图像顺时针旋转 90 度。
 [leetcode 56合并重叠区间](https://leetcode-cn.com/problems/merge-intervals/)--[笔记](../leetcode/56-merge-intervals.md)给出一个区间的集合，请合并所有重叠的区间（未排序，需要自定义排序比较器
-
+[leetcode 139单词分割](https://leetcode-cn.com/problems/word-break/)--[笔记](../leetcode/139-word-break.md)哦，不！你不小心把一个长篇文章中的空格、标点都删掉了，并且大写也弄成了小写。像句子"I reset the computer. It still didn’t boot!"已经变成了"iresetthecomputeritstilldidntboot"。在处理标点符号和大小写之前，你得先把它断成词语。当然了，你有一本厚厚的词典dictionary，不过，有些词没在词典里。假设文章用sentence表示，设计一个算法，把文章断开，要求未识别的字符最少，返回未识别的字符数。
 
 
