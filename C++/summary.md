@@ -1,5 +1,5 @@
 # 算法整理     
-130开始
+216结束
 ---------------------------
 ## 二分
 [leetcode 29两数相除](https://leetcode-cn.com/problems/divide-two-integers/)--[笔记](../leetcode/29-divide-two-integers.md)将两数相除，要求不使用乘法、除法和 mod 运算符计算商，需要截去小数部分。（二分思想）
@@ -22,7 +22,7 @@
 [leetcode 92反转部分排序链表2](https://leetcode-cn.com/problems/reverse-linked-list-ii/)--[笔记](../leetcode/92-reverse-linked-list-ii.md)反转从位置 m 到 n 的链表。请使用一趟扫描完成反转。
 [leetcode 141判断链表是否有环](https://leetcode-cn.com/problems/linked-list-cycle/)--[笔记](../leetcode/141-linked-list-cycle.md)给定一个链表，判断链表中是否有环。
 [leetcode 142判断链表是否有环2](https://leetcode-cn.com/problems/linked-list-cycle-ii/)--[笔记](../leetcode/142-linked-list-cycle-ii.md)给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。
-
+[leetcode 167两数之和](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/)--[笔记](../leetcode/167-two-sum-ii-input-array-is-sorted.md)给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。
 
 
 ## 哈希表
@@ -49,8 +49,8 @@
 [leetcode 114展开二叉树为链表](https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/)--[笔记](../leetcode/114-flatten-binary-tree-to-linked-list.md)给定一个二叉树，原地将它展开为链表。
 [leetcode 130封闭区域](https://leetcode-cn.com/problems/surrounded-regions/)--[笔记](../leetcode/130-surrounded-regions.md)给定一个二维的矩阵，包含 'X' 和 'O'（字母 O），找到所有被 'X' 围绕的区域，并将这些区域里所有的 'O' 用 'X' 填充。 
 [leetcode 133图的深拷贝](https://leetcode-cn.com/problems/clone-graph/)--[笔记](../leetcode/133-clone-graph.md)给你无向连通图中一个节点的引用，请你返回该图的 深拷贝（克隆）。 
-
-
+[leetcode 200岛屿数量](https://leetcode-cn.com/problems/number-of-islands/)--[笔记](../leetcode/200-number-of-islands.md)给你一个由 '1'（陆地）和 '0'（水）组成的的二维网格，请你计算网格中岛屿的数量。
+[leetcode 216组合总和 III](https://leetcode-cn.com/problems/combination-sum-iii/)--[笔记](../leetcode/216-combination-sum-iii.md)找出所有相加之和为 n 的 k 个数的组合。组合中只允许含有 1 - 9 的正整数，并且每种组合中不存在重复的数字。 
 
 ## BFS+递归-层次遍历
 [leetcode 22生成括号？](https://leetcode-cn.com/problems/generate-parentheses/)--[笔记](../leetcode/22-generate-parentheses.md)给出 n 代表生成括号的对数，写出一个函数使其能够生成所有可能的并且有效的括号组合，"((()))"...
@@ -71,8 +71,8 @@
 [leetcode 96二叉搜索树](https://leetcode-cn.com/problems/unique-binary-search-trees/)--[笔记](../leetcode/96-unique-binary-search-trees.md)给定一个整数 n，求以 1 ... n 为节点组成的二叉搜索树有多少种？
 [leetcode 97交错组成字符串](https://leetcode-cn.com/problems/interleaving-string/)--[笔记](../leetcode/97-interleaving-string.md)给定三个字符串 s1, s2, s3, 验证 s3 是否是由 s1 和 s2 交错组成的。 
 [leetcode 121买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)--[笔记](../leetcode/121-best-time-to-buy-and-sell-stock.md)给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。最多只允许完成一笔交易（即买入和卖出一支股票），设计一个算法来计算你所能获取的最大利润。
-
-
+[leetcode 152最大子数组乘积](https://leetcode-cn.com/problems/maximum-product-subarray/)--[笔记](../leetcode/152-maximum-product-subarray.md)给你一个整数数组 nums ，请你找出数组中乘积最大的连续子数组（该子数组中至少包含一个数字），并返回该子数组所对应的乘积。
+[leetcode 198房屋偷窃](https://leetcode-cn.com/problems/house-robber/)--[笔记](../leetcode/198-house-robber.md)你是一个专业的小偷，计划偷窃沿街的房屋。每间房内都藏有一定的现金，影响你偷窃的唯一制约因素就是相邻的房屋装有相互连通的防盗系统，如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警。给定一个代表每个房屋存放金额的非负整数数组，计算你不触动警报装置的情况下，一夜之内能够偷窃到的最高金额
 
 
 ## 贪心算法
@@ -84,7 +84,7 @@
 [leetcode 28实现 strStr()](https://leetcode-cn.com/problems/implement-strstr/)--[笔记](../leetcode/28-implement-strstr.md)在haystack字符串中找出needle字符串出现的第一个位置 (从0开始)。如果不存在，则返回-1.
 [leetcode 38报数序列](https://leetcode-cn.com/problems/count-and-say/)--[笔记](../leetcode/38-count-and-say.md)报数序列是一个整数序列，按照其中的整数的顺序进行报数，得到下一个数
 [leetcode 43字符串相乘](https://leetcode-cn.com/problems/multiply-strings/)--[笔记](../leetcode/43-multiply-strings.md)给定两个以字符串形式表示的非负整数 num1 和 num2，返回 num1 和 num2 的乘积，它们的乘积也表示为字符串形式。
- 
+[leetcode 214最短回文串](https://leetcode-cn.com/problems/shortest-palindrome/)--[笔记](../leetcode/214-shortest-palindrome.md) 给定一个字符串 s，你可以通过在字符串前面添加字符将其转换为回文串。找到并返回可以用这种方式转换的最短回文串。
 
 ## 二叉树
 [leetcode 94中序遍历二叉树](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)--[笔记](../leetcode/94-binary-tree-inorder-traversal.md)给定一个二叉树，返回它的中序 遍历。
@@ -105,15 +105,22 @@
 
 ## 图
 [leetcode 133图的深拷贝](https://leetcode-cn.com/problems/clone-graph/)--[笔记](../leetcode/133-clone-graph.md)给你无向连通图中一个节点的引用，请你返回该图的 深拷贝（克隆）。
+[leetcode 207课程选修](https://leetcode-cn.com/problems/course-schedule/)--[笔记](../leetcode/207-course-schedule.md)你这个学期必须选修 numCourse 门课程，记为 0 到 numCourse-1 。  
+在选修某些课程之前需要一些先修课程。 例如，想要学习课程 0 ，你需要先完成课程 1 ，我们用一个匹配来表示他们：[0,1] 给定课程总量以及它们的先决条件，请你判断是否可能完成所有课程的学习？  （指向次数和是否为环
+
 
 ## 位运算
 [leetcode 136只出现一次的元素](https://leetcode-cn.com/problems/single-number/)--[笔记](../leetcode/136-single-number.md)给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。
+[leetcode 201范围内所有数字按位与](https://leetcode-cn.com/problems/bitwise-and-of-numbers-range/)--[笔记](../leetcode/201-bitwise-and-of-numbers-range.md)给定范围 [m, n]，其中 0 <= m <= n <= 2147483647，返回此范围内所有数字的按位与（包含 m, n 两端点）
 
-## 栈和队列
+
+## 栈和队列、堆
 [leetcode 20有效的符号](https://leetcode-cn.com/problems/valid-parentheses/)--[笔记](../leetcode/20-valid-parentheses.md)给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
 [leetcode 94中序遍历二叉树](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/)--[笔记](../leetcode/94-binary-tree-inorder-traversal.md)给定一个二叉树，返回它的中序 遍历。
 [leetcode 98有效的二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/)--[笔记](../leetcode/98-validate-binary-search-tree.md)给定一个二叉树，判断其是否是一个有效的二叉搜索树。（递归中序 迭代栈）
 [leetcode 114展开二叉树为链表](https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/)--[笔记](../leetcode/114-flatten-binary-tree-to-linked-list.md)给定一个二叉树，原地将它展开为链表。
+[leetcode 155最小栈](https://leetcode-cn.com/problems/min-stack/)--[笔记](../leetcode/155-min-stack.md)设计一个支持 push ，pop ，top 操作，并能在常数时间内检索到最小元素的栈。 
+[leetcode 215第K个最大的元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)--[笔记](../leetcode/155-min-stack.md)在未排序的数组中找到第 k 个最大的元素。请注意，你需要找的是数组排序后的第 k 个最大的元素，而不是第 k 个不同的元素。 
 
 ## 链表
 [leetcode2两数相加](https://leetcode-cn.com/problems/add-two-numbers/)--[笔记](../leetcode/2-add-two-numbers.md)两个非空的链表逆序存储进行相加
@@ -126,6 +133,9 @@
 [leetcode 141判断链表是否有环](https://leetcode-cn.com/problems/linked-list-cycle/)--[笔记](../leetcode/141-linked-list-cycle.md)给定一个链表，判断链表中是否有环。
 [leetcode 142判断链表是否有环2](https://leetcode-cn.com/problems/linked-list-cycle-ii/)--[笔记](../leetcode/142-linked-list-cycle-ii.md)给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。
 [leetcode 148链表排序](https://leetcode-cn.com/problems/sort-list/)--[笔记](../leetcode/148-sort-list.md)在 O(n log n) 时间复杂度和常数级空间复杂度下，对链表进行排序。
+[leetcode 160两个单链表的相交点](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/)--[笔记](../leetcode/160-intersection-of-two-linked-lists.md)找到两个单链表相交的起始节点
+[leetcode 206反转单链表](https://leetcode-cn.com/problems/reverse-linked-list/)--[笔记](../leetcode/206-reverse-linked-list.md)反转一个单链表。
+
 
 ## 其他
 ### 数学运算
@@ -133,7 +143,7 @@
 [leetcode 43字符串相乘](https://leetcode-cn.com/problems/multiply-strings/)--[笔记](../leetcode/43-multiply-strings.md)给定两个以字符串形式表示的非负整数 num1 和 num2，返回 num1 和 num2 的乘积，它们的乘积也表示为字符串形式。 
 [leetcode 60第k个排列](https://leetcode-cn.com/problems/permutation-sequence/)--[笔记](../leetcode/60-permutation-sequence.md)给出集合 [1,2,3,…,n]，其所有元素共有 n! 种排列，返回第 k 个排列。  
 [leetcode 66加一](https://leetcode-cn.com/problems/plus-one/)--[笔记](../leetcode/66-plus-one.md)给定一个由整数组成的非空数组所表示的非负整数，在该数的基础上加一（主要考虑进位
-
+[leetcode 169多数的一个元素](https://leetcode-cn.com/problems/majority-element/)--[笔记](../leetcode/169-majority-element.md)给定一个大小为 n 的数组，找到其中的多数元素。多数元素是指在数组中出现次数大于 ⌊ n/2 ⌋ 的元素
 
 
 ### 分治
