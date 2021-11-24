@@ -1,5 +1,5 @@
 # 题目链接
-[leetcode 647](https://leetcode-cn.com/problems/palindromic-substrings/submissions/)
+[leetcode 647](https://leetcode-cn.com/problems/palindromic-substrings/)
 
 # 原文
 给定一个字符串，你的任务是计算这个字符串中有多少个回文子串。
