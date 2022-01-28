@@ -15,6 +15,18 @@ mv：移动或者重命名文件和目录
 find：搜索文件和目录
 du：计算文件和目录的占用空间
 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 git
+
+zsh 切换 bash： exec bash
+bash切换zsh ： exec zsh
+持续获得超级用户权限：sudo su    退出 CTRL+D或者exit
+sudo passwd root 修改root密码
+软连接：ln -s 源文件 目标文件 
+nvidia-smi监控 GPU watch -n 1 nvidia-smi实时监控 GPU，watch -n 1 lscpu监控 CPU
+anaconda环境管理：
+source activate xxx	source deactivate
+conda create -n wal python==3.6.5
+conda remove -n wal --all
+conda info -e   查看所有虚拟环境
 ```
 #### Linux系统简介
 - 芬兰大学生李纳斯自己的unix，成为linux；
