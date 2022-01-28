@@ -1,9 +1,9 @@
 # 算法整理     
-696结束
+696结束105
 ---------------------------
 ## 二分
 [leetcode 29两数相除](https://leetcode-cn.com/problems/divide-two-integers/)--[笔记](../leetcode/29-divide-two-integers.md)将两数相除，要求不使用乘法、除法和 mod 运算符计算商，需要截去小数部分。（二分思想）
-[leetcode 33在有序但旋转过的数组中搜索目标](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)--[笔记](../leetcode/33-search-in-rotated-sorted-array.md)假设按照升序排序的数组在预先未知的某个点上进行了旋转，寻找目标数字的下标（改进的二分查找）
+[leetcode 33在有序但旋转过的数组中搜索目标](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)--[笔记](../leetcode/33-Search-in-Rotated-Sorted-Array.md)假设按照升序排序的数组在预先未知的某个点上进行了旋转，寻找目标数字的下标（改进的二分查找）
 [leetcode 34寻找目标值在数组中的开始和结束位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/)--[笔记](../leetcode/34-find-first-and-last-position-of-element-in-sorted-array.md)给定一个按照升序排列的重复整数数组 nums，和一个目标值 target。找出给定目标值在数组中的开始位置和结束位置。（循环边界二分查找）
 [leetcode 35在有序数组中找到目标下标或待插入下标](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/)--[笔记](../leetcode/35-search-in-rotated-sorted-array.md)给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。
 [leetcode 50幂函数x的n次方](https://leetcode-cn.com/problems/powx-n/)--[笔记](../leetcode/50-powx-n.md)实现 pow(x, n) ，即计算 x 的 n 次幂函数。
@@ -102,7 +102,7 @@
 [leetcode 416分两个相等的子集](https://leetcode-cn.com/problems/partition-equal-subset-sum/)--[笔记](../leetcode/416-partition-equal-subset-sum.md)给定一个只包含正整数的非空数组。是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。
 [leetcode 486预测赢家](https://leetcode-cn.com/problems/predict-the-winner/)--[笔记](../leetcode/486-predict-the-winner.md)给定一个表示分数的非负整数数组。 玩家 1 从数组任意一端拿取一个分数，随后玩家 2 继续从剩余数组任意一端拿取分数，然后玩家 1 拿，…… 。每次一个玩家只能拿取一个分数，分数被拿取之后不再可取。直到没有剩余分数可取时游戏结束。最终获得分数总和最多的玩家获胜。 
 [leetcode 494目标和的个数](https://leetcode-cn.com/problems/target-sum/)--[笔记](../leetcode/494-target-sum.md)给定一个非负整数数组，a1, a2, ..., an, 和一个目标数，S。现在你有两个符号 + 和 -。对于数组中的任意一个整数，你都可以从 + 或 -中选择一个符号添加在前面。返回可以使最终数组和为目标数 S 的所有添加符号的方法数。
-[leetcode 647回文字串](https://leetcode-cn.com/problems/palindromic-substrings/)--[笔记](../leetcode/647-palindromic-substrings.md)给定一个字符串，你的任务是计算这个字符串中有多少个回文子串，具有不同开始位置或结束位置的子串，即使是由相同的字符组成，也会被计为是不同的子串。
+[leetcode 647回文字串](https://leetcode-cn.com/problems/palindromic-substrings/)--[笔记](../leetcode/647-Palindromic-Substrings.md)给定一个字符串，你的任务是计算这个字符串中有多少个回文子串，具有不同开始位置或结束位置的子串，即使是由相同的字符组成，也会被计为是不同的子串。
 
 ## 贪心算法
 [leetcode 55跳跃游戏](https://leetcode-cn.com/problems/jump-game/)--[笔记](../leetcode/55-jump-game.md)给定一个非负整数数组，最初位于数组的第一个位置。数组中的每个元素代表在该位置可以跳跃的最大长度。判断是否能够到达最后一个位置。
@@ -167,7 +167,7 @@
 [leetcode 98有效的二叉搜索树](https://leetcode-cn.com/problems/validate-binary-search-tree/)--[笔记](../leetcode/98-validate-binary-search-tree.md)给定一个二叉树，判断其是否是一个有效的二叉搜索树。（递归中序 迭代栈）
 [leetcode 114展开二叉树为链表](https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/)--[笔记](../leetcode/114-flatten-binary-tree-to-linked-list.md)给定一个二叉树，原地将它展开为链表。
 [leetcode 155最小栈](https://leetcode-cn.com/problems/min-stack/)--[笔记](../leetcode/155-min-stack.md)设计一个支持 push ，pop ，top 操作，并能在常数时间内检索到最小元素的栈。 
-[leetcode 215第K个最大的元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)--[笔记](../leetcode/155-min-stack.md)在未排序的数组中找到第 k 个最大的元素。请注意，你需要找的是数组排序后的第 k 个最大的元素，而不是第 k 个不同的元素。 
+[leetcode 215第K个最大的元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)--[笔记](../leetcode/215-kth-largest-element-in-an-array.md)在未排序的数组中找到第 k 个最大的元素。请注意，你需要找的是数组排序后的第 k 个最大的元素，而不是第 k 个不同的元素。 
 [leetcode 394解码字符串](https://leetcode-cn.com/problems/decode-string/)--[笔记](../leetcode/394-decode-string.md)给定一个经过编码的字符串，返回它解码后的字符串。【状态转换机】  
 
 

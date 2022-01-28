@@ -44,6 +44,14 @@
   add_executable(useHello useHello.cpp)
   # 链接到动态库
   target_link_libraries(userHello hello_shared)
+  # 查找在某个路径下的所有源文件
+  aux_source_directory(< dir > < variable >)
+  # 添加一个子目录并构建该子目录。
+  add_subdirectory (source_dir [binary_dir] [EXCLUDE_FROM_ALL])
+  # 将指定目录添加到编译器的头文件搜索路径之下，指定的目录被解释成当前源码路径的相对路径
+  include_directories ([AFTER|BEFORE] [SYSTEM] dir1 [dir2 ...])
+  # 引入外部依赖包(以OPENCV为例)
+  find_package(OpenCV REQUIRED) include_directories(${OpenCV_INCLUDE_DIRS}) target_link_libraries(img ${OpenCV_LIBS})
   ```
   
   ```shell
@@ -54,6 +62,51 @@
   # cmake --build .
   ```
   
+- cmake构建c++代码
+
+  > **同目录：**
+  >
+  > 1. 首先编写好.h对应.cpp如sort.cpp，首先#include sort.h,然后编写函数；
+  >
+  > 2. 编写对应.h，`#ifndef __MySort__  #define __MySort__  #endif` 里面如果使用库也需要包含，如<vector> using namespace std;等，再编写声明；
+  >
+  > 3. 编写main.cpp  需要#include "sort.h"
+  >
+  > 4. 编写CMakeLists.txt
+  >
+  >    ```cmake
+  >    cmake_minimum_required(VERSION 3.0)
+  >    project(sort)
+  >    set(CMAKE_CXX_FLAGS "-std=c++11")
+  >       
+  >    set(srcs main.cpp MySort.cpp)
+  >    add_executable(sort ${srcs})
+  >    ```
+  >    
+  >    **不同目录**：
+  >    
+  >
+  > 1. main对应CMakeLists.txt：
+  >
+  >    ```cmake
+  >    cmake_minimum_required(VERSION 3.0)
+  >    project(sort)
+  >    include_directories(./ ./utils) # 添加到头文件搜索路径 否则要#include "sub/xxx.h"
+  >    add_subdirectory(utils) # 添加子目录并构建 否则找不到静态链接库文件
+  >
+  >    set(srcs main.cpp)
+  >    add_executable(sort ${srcs})
+  >    target_link_libraries(sort utils) #链接到静态库
+  >    ```
+  >
+  >     `target_link_libraries(sort header)` 表示在生成 sort 时要调用静态链接库 header , 而 header 是在 sort 目录下的 CMakeLists.txt 中的 `add_library(header STATIC sort.cpp)` 中产生的
+  >
+  > 2. sort对应CMakeLists.txt：
+  >
+  >    ```cmake
+  >    add_library(header STATIC sort.cpp)
+  >    ```
+
 - 笔记整理
 
   ```cmake

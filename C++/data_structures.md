@@ -10,7 +10,7 @@
 
 **时间复杂度**：  
 - 程序运行从开始到结束所需的时间（事后统计法、**事前估算法**）——大O记号：渐进时间复杂度，表示运行时间的上限。 
-  
+
 **空间复杂度**：对应的程序从运行开始到结束所需的存储量（固定部分、可变部分）  
 
 ## 线性表 
@@ -58,5 +58,48 @@ public:
 
 ## 笔记
 - [int 最大值最小值](https://blog.csdn.net/jyy208/article/details/7479113)int类型为4字节32比特，最大值：正数时最高位为0，所以最大值即为0111 1111:1111为2^31-1;最小值：负数的二进制用补码表示，首先-(2^31-1)为1000 0000:0001，所以-2^31二进制为1000:0000
+
 - [回文算法](https://leetcode-cn.com/problems/shortest-palindrome/solution/zui-duan-hui-wen-chuan-by-leetcode-solution/)使用正反序的ascll码进行对比（还有KMP算法）
+
 - 字符串反转函数 reverse(str.begin(),str.end())
+
+- 字符串转int
+
+  > 1. stoi：c++风格，抛异常，直接将string转int，格式错误抛异常
+  >
+  > 2. atoi：c风格，遇到非法字符包括小数点返回0，atoi(str.c_str())，10进制
+  >
+  > 3. strtol：同2，但支持多种进制转换，strtol(str.c_str(),nullptr,10);
+  >
+  > 4. stringstream自定义:
+  >
+  >    ```c++
+  >    int stringToInt(const string &s){
+  >        int v;
+  >        stringstream ss;
+  >        ss << s;
+  >        s >> v;
+  >        return v;
+  >    }
+  >    ```
+  >
+  
+- 整型
+
+  > bool:8
+  >
+  > char:8
+  >
+  > short:16
+  >
+  > int:32
+  >
+  > long:32
+  >
+  > long long 64
+  >
+  > float:32
+  >
+  > double:64
+  >
+  > long double:80 96 128

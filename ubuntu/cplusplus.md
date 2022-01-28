@@ -117,17 +117,22 @@
 
 - Composition复合 has-a
 
-- 委托
+  > 1. A has a B 在A中包含一个B的成员，A实用B成员各种方法，对B的成员不可见，B就像黑箱一样，很好的分离了A和B，使两者耦合很低，使用黑色菱形表示容器，容器了另一个对象，比如Adapter模式也是使用了组合的思想
+  > 2. 构造由内而外，先调用组件的构造函数，再执行自己
+  > 3. 析构由外而内，先执行自己，再调用组件的析构函数
 
-  > 1. 只提供接口
-  > 2. copy on write
+- [委托](https://www.cnblogs.com/narutow/p/8117352.html)
+
+  > 1. 通过引用来组合，A用一个指针来指向B，是指委托关系，A并不实际包含B，B的生命周期也不被A所限制，寿命也不一致，使用白色菱形表示，等到需要使用B的时候再去创建
+  > 2. 只提供接口
+  > 3. copy on write
 
 - 继承 is-a
 
-  > 1. xxx :public struct xx{}
+  > 1. xxx :public struct xx{}，java只有public，c++还有private和protected，
   > 2. 构造由内而外，先调用父类，再执行自己
   > 3. 析构由外而内，先执行自己，再调用父类析构函数
-  > 4. 
+  > 4. 搭配虚函数...
 
 ### P12 虚函数与多态
 
@@ -136,7 +141,7 @@
   > 1. Template Method
   > 2. 非虚函数：不可以重新定义
   > 3. 虚函数 可以重新定义，但已经有默认定义
-  > 4. 纯虚函数 必须重新定义
+  > 4. 纯虚函数 必须重新定义（virtual void xx() const=0;）
   > 5. 继承搭配虚函数样例
 
 - 委托和继承
@@ -145,7 +150,7 @@
 
 ### P13 委托相关设计
 
-
+ 
 
 ### P14 导读
 
@@ -406,6 +411,11 @@
 - UML类的表示
 
   > 1. 3层 类名（抽象类使用斜体） 成员名（类的属性即成员变量） 方法名（类的方法即成员函数）
+  
+- 类之间的关系
+
+  > 1. 泛化：类的继承关系，用空心三角和实线，空心三角指向父类
+  > 2. 实现：类与接口的关系，表示类是接口所有特征和行为的实现
 
 #### 面向对象设计原则
 
@@ -414,39 +424,4 @@
 #### 工厂方法模式
 
 #### 抽象工厂模式
-
-### UE4地图
-
-#### 工程形式(Learn选项卡)
-
-- 安装使用
-
-  > 1. 下载并创建项目
-  > 2. 安装地址中找到.uproject，双击打开，创建自己的类：文件--新建C++类--无父类--创建类；自动打开VS后环境下载完成
-  > 3. 将Airsim/Unreal/Plugins文件夹复制到工程下(.uproject同级)，右击修改.uproject，增加AdditionalDependencies和Plugins
-  > 4. 右击.uproject选择Generate Visual Studio project files，双击打开.sln文件，设置编译选择为DebugGame Editor和Win64，设为启动项目
-  > 5. F5调试打开，在 世界场景设置中选择 游戏覆盖模式为 `AirSimGameMode`，项目设置--默认游戏模式设为``AirsimGameMode`,保存。
-
-- 再次使用
-
-  > 打开.sln文件，调试运行
-  >
-  > 直接Launch或者双击Editor可能没有加载airsim插件
-
-#### 资源形式(Unreal Marketplace选项卡)
-
-- 安装使用
-
-  > 1. 新建Unreal工程，启动`Launch Unreal Engine 4.25`,新建项目类型：游戏--空模板--默认配置--修改位置和英文命名，新建完成
-  > 2. 加载资源，在Marketplace搜索资源，选择`Add To Project`，选择新建项目名称，下载完成以后会在UE4中出现文件夹；
-  > 3. 选择文件夹，过滤器选择关卡(一般选择Demo开头的)，双击使用，在项目设置中修改编辑器开始地图和游戏默认地图；
-  > 4. 创建自己的类：文件--新建C++类--无父类--创建类；自动打开VS后，将Airsim/Unreal/Plugins文件夹复制到工程下(.uproject同级)，右击修改.uproject，增加AdditionalDependencies和Plugins，关闭VS和UE4
-  > 5. 右击.uproject选择Generate Visual Studio project files，双击打开.sln文件，设置编译选择为DebugGame Editor和Win64，设为启动项目
-  > 6. F5调试打开，在 世界场景设置中选择 游戏覆盖模式为 `AirSimGameMode`，项目设置--默认游戏模式设为``AirsimGameMode`,保存。
-
-- 再次使用
-
-  > 打开.sln文件，调试运行
-  >
-  > 直接Launch或者双击Editor可能没有加载airsim插件
 

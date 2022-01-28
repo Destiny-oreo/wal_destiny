@@ -151,9 +151,24 @@
 
   > 1. 维持顺序的容器
   >    1. vector 动态数组，O1随机读取，尾部增删的复杂度O1
+  >
+  >       `.at() empty() size() push_back() pop_back() front() clear() insert() max_size() capacity() erase() resize()`
+  >
   >    2. list 双向链表 很少使用
+  >
+  >       ```c++
+  >       #include <list>
+  >       list1.assign(x);list1.back();list1.begin();list1.empty();list1.front();list1.erase();list1.insert();list1.pop_front();list1.pop_back();list1.push_back();list1.push_front();
+  >       ```
+  >
   >    3. deque 双端队列 很强大 O1随机读取和O1头部增删尾部增删
+  >
+  >       ```c++
+  >       deque1.push_front();deque1.push_back();deque1.pop_front();deque1.pop_back();...
+  >       ```
+  >
   >    4. array 固定大小的数组 刷题很少用
+  >
   >    5. forward_list 单向链表 刷题很少用
   > 2. Container Adaptors 基于其他容器实现的数据结构
   >    1. stack LIFO 基于deque实现，常用语深度优先搜索、字符串匹配以及单调栈问题
@@ -161,15 +176,161 @@
   >    3. priority_queue 最大值先出的数据结构 基于vector实现堆结构 可以再Onlogn时间排序数组，Ologn时间插入任意值 O1时间获得最大值 Ologn时间 删除最大值 常用于维护数据结构并快速获取最大最小值
   > 3. Associative Containers 实现排好序的数据结构
   >    1. set 有序集合 元素不可重复 底层红黑树实现即特殊的二叉查找树BST 
+  >
+  >       `erase() find() insert() lower_bound() key_comp() max_size() size() swap() upper_bound()`
+  >
   >    2. multiset 支持重复元素的set
+  >
   >    3. map 有序映射或有序表 set的基础上加上映射关系 对每个key存一个value
+  >
+  >       `find() erase() size() clear() count() empty() begin() end() rbegin() rend() swap() lower_bound() upper_bound()`
+  >
   >    4. multimap 支持重复元素的map
-  > 4. Unordered Associative Containers：对每个 Associative Containers 实现了哈希版本。
+  > 4. Unordered Associative Containers：对每个 Associative Containers 实现了[哈希](https://blog.csdn.net/qq_21997625/article/details/84672775)版本。
   >    1. unordered_set：哈希集合，可以在 O(1) 的时间快速插入、查找、删除元素，常用于快
   >       速的查询一个元素是否在这个容器内。
   >    2.  unordered_multiset：支持重复元素的 unordered_set。
   >    3.  unordered_map：哈希映射或哈希表，在 unordered_set 的基础上加上映射关系，可以对每一个元素 key 存一个值 value。在某些情况下，如果 key 的范围已知且较小，我们也可以用 vector 代替 unordered_map，用位置表示 key，用每个位置的值表示 value。
   >    4.  unordered_multimap：支持重复元素的 unordered_map。
+  >
+  > 对比：
+  >
+  > 1. vector:内存连续，O1随机访问、尾端插入删除，On随机插入删除
+  > 2. list:非连续存储，双链表，O1随机插入删除，On随机访问
+  > 3. deque:O1随机访问、两端插入删除，较高效的随机插入删除
+  > 4. map:均为OlogN
+  > 5. set:均为OlogN
+
+- 三种容器
+
+  - 顺序存储结构
+
+    - vector（Array区别？）
+
+      > 1. 内存上连续，支持高效的随机访问和尾端插入/删除操作，但在其他位置插入删除操作效率底下；
+      > 2. 支持不指定vector大小的存储，但是数组的扩展需要自己实现；
+
+    - list
+
+      > 1. 非连续存储结构，具有双链表结构，每个元素维护一对前后指针，支持前后向遍历，支持高效的随机插入和删除，但随机访问效率底下，内存开销也比较大（维护额外指针）
+      > 2. 不支持[]和vector.at()，相对于vector占用内存多
+      >
+      > 函数：
+      >
+      > 1. list<pair<int,int>> cache;
+      >
+      >    cache.splice(cache.begin(),cache,it->second);dst.splice(dst loc, src list,src loc)
+      >
+      >    cache.insert(cache.begin(),make_pair(key,value));
+
+    - deque
+
+      > O1随机访问，由若干段连续空间串接而成，一旦需要增加新的空间，便配置一段定量连续的空间串接上去；内部维护一个map作为主控，主控空间中每个元素都是指针，指向另一段较大区域（缓冲区）。
+      >
+      > 1. 连续存储结构，但是提供了两级数组结构，支持高效的首尾端插入删除操作，在功能上合并了vector和list
+      > 2. 随机访问方便，支持[]操作符和vector.at()；在内部方便的插入和删除；可在两端push和pop；占用内存较多
+      >
+      > 三者区别：
+      >
+      > 1. 高效随机存取，不在乎插入删除的效率，使用vector
+      > 2. 需要大量的插入和删除，不关心随机存取，使用list
+      > 3. 需要随机存取，关心两端数据的插入和删除，使用deque
+
+  - 关联存储结构
+
+    - set
+    - map
+    - multiset
+    - multimap
+  
+- [KMP算法](https://www.cnblogs.com/yjiyjige/p/3263858.html)
+
+  > 1. 通过消除主串指针的回溯来提高匹配的效率
+  >
+  > 2. next数组：对应模式串p中每一个元素，都存在一个k使模式串开头的k个字符依次与pj前面k个字符相同，如果对应k有多个，取最大的一个
+  >
+  >    ```c++
+  >    void getNext(string p,vector<int> next){
+  >        int j=0,k=-1;
+  >        next[0] = -1;
+  >        while(j<p.size()-1){
+  >            if(j==-1 || p[j]==p[k]){
+  >                j++,k++;
+  >                if(p[j]==p[k])	next[j] = next[k];
+  >                else	next[j] = k;
+  >            }
+  >            else{
+  >                k = next[k];
+  >            }
+  >        }
+  >    }
+  >    ```
+  >
+  > 3. 理解next：j为0 和1的时候k都应该为0，为了区分i什么时候移动，将j=0的k设为-1；
+  >
+  >    当p[k]==p[j]时，必然已经有p[0]...p[k-1]==p[j-k]...p[j-1]即next[j]=k，加上新的相等数值以后，得到next[j+1] = k+1；
+  >    
+  >    当p[k]!=p[j]时，所以next[j+1]此时无法回到k，即next[j+1]<k,所以寻找p[k]前面k-1个字符与p[j]及其之前字符的最长重合串，所以就是求next[k]，即k=next[k]
+  >    
+  > 4. [KMP](https://blog.csdn.net/dark_cy/article/details/88698736)
+  >
+  >    ```c++
+  >    int kmp(string s,string p){
+  >        vector<int> next(p.size(),0);
+  >        getNext(p,next);
+  >        int i=0,j=0;
+  >        while(i<s.size() && j<p.size()){
+  >            if(j==-1 || s[i]==p[j]){
+  >                i++,j++;
+  >            }
+  >            else{
+  >                j = next[j];
+  >            }
+  >        }
+  >        if(j>=p.size())	return i-j;
+  >        else	return -1;
+  >    }
+  >    ```
+  
+- 背包问题
+
+  > - 限定物体0-1个
+  >
+  >   只考虑当前物体的体积满足要求时(不满足时相当于此物体无用 直接跳过)，当前两种选择，放入此物品以及不放入此物品，选择的标准是那种价值更加高，所以比较dp[i-1] [j]和dp[i-1] [j-w]+v即可，使用一维dp的话需要使用到j-w，所以需要使用逆序遍历，W到w之间，小于w的直接不改变，自动继承之前的值相当于i-1，对于W到w之间，判断j以及j-w+v即可
+  >
+  >   ```c++
+  >   int func(vector<int> weights,vector<int> values,int N,int W){
+  >       vector<int> dp(W+1,0);
+  >       for(int i=1;i<=N;i++){
+  >           int v = values[i-1],w=weights[i-1];
+  >           for(int j=W;j>=w;j--){
+  >               dp[j] = max(dp[j],dp[j-w]+v);
+  >           }
+  >       }
+  >       return dp[W];
+  >   }
+  >   ```
+  >
+  > - 不限定物体数量
+  >
+  >   此时第二层遍历是在考虑该物品拿几个比较合适，所以不需要dp[i-1] [j-w]而是dp[i] [j-w]即这一次不拿比较好还是再拿一次比较好
+  >
+  >   ```c++
+  >   int func(vector<int> weights,vector<int> values,int N,int W){
+  >       vector<int> dp(W+1,0);
+  >       for(int i=1;i<=N;i++){
+  >           int v=values[i-1], w=weights[i-1];
+  >           for(int j=w;j<=W;j++){
+  >               dp[j] = max(dp[j],dp[j-w]+v);
+  >           }
+  >       }
+  >       return dp[W];
+  >   }
+  >   ```
+  >
+  >   
+  >
+  > 
 
 
 
@@ -183,20 +344,46 @@
   >
   > 需要能讲明白代码中每一行的目的。快速排序时间复杂度平均状态下 O（NlogN），空间复杂度 O（1），归并排序最坏情况下时间复杂度 O（NlogN），空间复杂度 O（N）
   >
-  > 
+  > **比较排序**
+  >
+  > 1. ~~快速排序O(nlogn)~~
+  >
+  > 2. ~~归并排序O(nlogn)~~
+  >
+  >    使用分治算法，每次将已有序的两个子序列合并，得到完全有序的序列
+  >
+  > 3. 堆排序O(nlogn)
+  >
+  > 4. ~~冒泡排序O(n²)~~
+  >
+  >    两两比较相邻的元素，每次将剩下位置中的最大元素移至最后
+  >
+  > 5. ~~选择排序O(n²)~~
+  >
+  >    表现最稳定，每一趟寻找最小的元素放在起始位置
+  >
+  > 6. ~~插入排序O(n²)~~
+  >
+  >    对于未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入，一共扫描n-1遍，每次i到1；
+  >
+  > **非比较排序**
+  >
+  > 1. 计数排序O(n+k)
+  > 2. 基数排序O(n+k)
+  > 3. 桶排序O(n+k)
 
 - 题目
 
-  > - Leetcode 148. Sort List
-  > - Leetcode 56. Merge Intervals
-  > - Leetcode 27. Remove elements
+  > - ~~Leetcode 148. Sort List~~
+  > - ~~Leetcode 56. Merge Intervals~~
+  > - ~~Leetcode 27. Remove elements~~
   >
   > ---
   >
-  > - Leetcode 179. Largest Number
-  > - Leetcode 75. Sort Colors
-  > - Leetcode 215. Kth Largest Element
-  > - Leetcode 4. Median of Two Sorted Arrays
+  > - ~~Leetcode 179. Largest Number~~
+  > - ~~Leetcode 75. Sort Colors~~
+  > - ~~Leetcode 215. Kth Largest Element~~
+  > - ~~Leetcode 4. Median of Two Sorted Arrays~~
 
   
 
@@ -247,26 +434,28 @@
 
 - Hashmap/Hashset
 
-  > - Leetcode 1. Two Sum
-  > - Leetcode 146. LRU Cache (Python 中可以使用 OrderedDict 来代替)
-  > - Leetcode 128. Longest Consecutive Sequence
-  > - Leetcode 73. Set Matrix Zeroes
-  > - Leetcode 380. Insert Delete GetRandom O(1)
-  > - Leetcode 49. Group Anagrams
-  > - Leetcode 350. Intersection of Two Arrays II
-  > - Leetcode 299. Bulls and Cows
-  > - Leetcode 348 Design Tic-Tac-Toe
+  > 哈希集合为unordered_set，可以查找元素是否在集合中，如果需要同时存储键和值，需要使用unordered_map,用来统计频率或内容，如果元素有限且范围不大，可以使用固定大小的数组，如所有字母的出现次数等，空间复杂度可以降为常数级别[26]；
+  >
+  > - ~~Leetcode 1. Two Sum~~
+  > - ~~Leetcode 146. LRU Cache (Python 中可以使用 OrderedDict 来代替)~~
+  > - ~~Leetcode 128. Longest Consecutive Sequence~~
+  > - ~~Leetcode 73. Set Matrix Zeroes~~
+  > - ~~Leetcode 380. Insert Delete GetRandom O(1)~~
+  > - ~~Leetcode 49. Group Anagrams~~
+  > - ~~Leetcode 350. Intersection of Two Arrays II~~
+  > - ~~Leetcode 299. Bulls and Cows~~
+  > - `~~Leetcode 348 Design Tic-Tac-Toe~~`
 
 - Heap/Priority Queue
 
-  > - Leetcode 973. K Closest Points
-  > - Leetcode 347. Top k Largest Elements
-  > - Leetcode 23. Merge K Sorted Lists
-  > - Leetcode 264. Ugly Number II
-  > - Leetcode 1086. High Five
-  > - Leetcode 88. Merge Sorted Arrays
-  > - Leetcode 692. Top K Frequent Words
-  > - Leetcode 378. Kth Smallest Element in a Sorted Matrix
+  > - ~~Leetcode 973. K Closest Points~~
+  > - ~~Leetcode 347. Top k Largest Elements~~
+  > - ~~Leetcode 23. Merge K Sorted Lists~~
+  > - ~~Leetcode 264. Ugly Number II~~
+  > - `~~Leetcode 1086. High Five`~~`
+  > - ~~Leetcode 88. Merge Sorted Arrays~~
+  > - ~~Leetcode 692. Top K Frequent Words~~
+  > - ~~Leetcode 378. Kth Smallest Element in a Sorted Matrix~~
   > - Leetcode 295. Find Median from Data Stream （标准解法是双 heap，但是 SortedDict 会非常容易）
   > - Leetcode 767. Reorganize String
   > - Leetcode 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit (这个题用单调双端队列、TreeMap、双 heap 都可以)
@@ -280,24 +469,24 @@
 
 - 显式二分法
 
-  > - Leetcode 34. Find First and Last Position of Element in Sorted Array
-  > - Leetcode 33. Search in Rotated Sorted Array
+  > - ~~Leetcode 34. Find First and Last Position of Element in Sorted Array~~
+  > - ~~Leetcode 33. Search in Rotated Sorted Array~~
   > - Leetcode 1095. Find in Mountain Array
-  > - Leetcode 162. Find Peak Element
-  > - Leetcode 278. First Bad Version
-  > - Leetcode 74. Search a 2D Matrix
-  > - Leetcode 240. Search a 2D Matrix II
+  > - ~~Leetcode 162. Find Peak Element~~
+  > - ~~Leetcode 278. First Bad Version~~
+  > - ~~Leetcode 74. Search a 2D Matrix~~
+  > - ~~Leetcode 240. Search a 2D Matrix II~~
 
 - 隐式二分法
 
-  > - Leetcode 69. Sqrt(x)
-  > - Leetcode 540. Single Element in a Sorted Array
-  > - Leetcode 644. Maximum Average Subarray II
-  > - Leetcode 528. Random Pick with Weight
-  > - Leetcode 1300. Sum of Mutated Array Closest to Target
-  > - Leetcode 1060. Missing Element in Sorted Array
-  > - Leetcode 1062. Longest Repeating Substring
-  > - Leetcode 1891. Cutting Ribbons
+  > - ~~Leetcode 69. Sqrt(x)~~
+  > - ~~Leetcode 540. Single Element in a Sorted Array~~
+  > - `~~Leetcode 644. Maximum Average Subarray II~~`
+  > - ~~Leetcode 528. Random Pick with Weight~~
+  > - ~~Leetcode 1300. Sum of Mutated Array Closest to Target~~
+  > - `~~Leetcode 1060. Missing Element in Sorted Array~~`
+  > - `~~Leetcode 1062. Longest Repeating Substring~~`
+  > - `~~Leetcode 1891. Cutting Ribbons~~`
 
 ### 双指针
 
@@ -307,30 +496,30 @@
 
 - 背向双指针(回文串)
 
-  > - Leetcode 409. Longest Palindrome
-  > - Leetcode 125. Valid Palindrome
-  > - Leetcode 5. Longest Palindromic Substring
+  > - ~~Leetcode 409. Longest Palindrome~~
+  > - ~~Leetcode 125. Valid Palindrome~~
+  > - ~~Leetcode 5. Longest Palindromic Substring~~
 
 - 相向双指针
 
-  > - Leetcode 1. Two Sum (这里使用的是先排序的双指针算法，不同于 hashmap 做法)
-  > - Leetcode 167. Two Sum II - Input array is sorted
-  > - Leetcode 15. 3Sum
-  > - Leetcode 16. 3Sum Closest
-  > - Leetcode 18. 4Sum
-  > - Leetcode 454. 4Sum II
+  > - ~~Leetcode 1. Two Sum (这里使用的是先排序的双指针算法，不同于 hashmap 做法)~~
+  > - ~~Leetcode 167. Two Sum II - Input array is sorted~~
+  > - ~~Leetcode 15. 3Sum~~
+  > - ~~Leetcode 16. 3Sum Closest~~
+  > - ~~Leetcode 18. 4Sum~~
+  > - ~~Leetcode 454. 4Sum II~~
   > - Leetcode 277. Find the Celebrity
   > - Leetcode 11. Container With Most Water
 
 - 同向双指针
 
-  > - Leetcode 283. Move Zeroes
-  > - Leetcode 26. Remove Duplicate Numbers in Array
+  > - ~~Leetcode 283. Move Zeroes~~
+  > - ~~Leetcode 26. Remove Duplicate Numbers in Array~~
   > - Leetcode 395. Longest Substring with At Least K Repeating Characters
   > - Leetcode 340. Longest Substring with At Most K Distinct Characters
   > - Leetcode 424. Longest Repeating Character Replacement
   > - Leetcode 76. Minimum Window Substring
-  > - Leetcode 3. Longest Substring Without Repeating Characters
+  > - ~~Leetcode 3. Longest Substring Without Repeating Characters~~
   > - Leetcode 1004 Max Consecutive Ones III
 
 ### 宽度优先搜索
@@ -381,41 +570,41 @@
 
 - 基于树的 DFS：需要记住递归写前序中序后序遍历二叉树的模板
 
-  > - Leetcode 543 Diameter of Binary Tree
-  > - Leetcode 226 Invert Binary Tree
-  > - Leetcode 101 Symmetric Tree
-  > - Leetcode 951 Flip Equivalent Binary Trees
+  > - ~~Leetcode 543 Diameter of Binary Tree~~
+  > - ~~Leetcode 226 Invert Binary Tree~~
+  > - ~~Leetcode 101 Symmetric Tree~~
+  > - ~~Leetcode 951 Flip Equivalent Binary Trees~~
   > - Leetcode 124 Binary Tree Maximum Path Sum
-  > - Leetcode 236 Lowest Common Ancestor of a Binary Tree (相似题：235、1650)
-  > - Leetcode 105 Construct Binary Tree from Preorder and Inorder Traversal
-  > - Leetcode 104 Maximum Depth of Binary Tree
+  > - ~~Leetcode 236 Lowest Common Ancestor of a Binary Tree~~ (相似题：~~235~~、~~`1650`~~)
+  > - ~~Leetcode 105 Construct Binary Tree from Preorder and Inorder Traversal~~
+  > - ~~Leetcode 104 Maximum Depth of Binary Tree~~
   > - Leetcode 987 Vertical Order Traversal of a Binary Tree
-  > - Leetcode 1485 Clone Binary Tree With Random Pointer
-  > - Leetcode 572 Subtree of Another Tree
-  > - Leetcode 863 All Nodes Distance K in Binary Tree
-  > - Leetcode 1110 Delete Nodes And Return Forest
+  > - `~~Leetcode 1485 Clone Binary Tree With Random Pointer~~`
+  > - ~~Leetcode 572 Subtree of Another Tree~~
+  > - ~~Leetcode 863 All Nodes Distance K in Binary Tree~~
+  > - ~~Leetcode 1110 Delete Nodes And Return Forest~~
 
 - 二叉搜索树（BST）
 
-  > BST 特征：中序遍历为单调递增的二叉树，换句话说，根节点的值比左子树任意节点值都大，比右子树任意节点值都小，增删查改均为 O（h）复杂度，h 为树的高度；注意不是所有的 BST 题目都需要递归，有的题目只需要 while 循环即可
+  > BST 特征：中序遍历为单调递增的二叉树，换句话说，根节点的值比左子树任意节点值都大，比右子树任意节点值都小，增删查改均为 O（h）复杂度，h 为树的高度；注意不是所有的 BST 题目都需要递归，有的题目只需要 while 循环即可(stack)
   >
-  > - Leetcode 230 Kth Smallest element in a BST
-  > - Leetcode 98 Validate Binary Search Tree
-  > - Leetcode 270 Cloest Binary Search Tree Value
-  > - Leetcode 235 Lowest Common Ancestor of a Binary Search Tree
-  > - Leetcode 669 Trim a Binary Search Tree
-  > - Leetcode 700 Search in a Binary Search Tree
-  > - Leetcode 108 Convert Sorted Array to Binary Search Tree
-  > - Leetcode 333 Largest BST Subtree (与 98 类似)
-  > - Leetcode 285 Inorder Successor in BST (I, II)
+  > - ~~Leetcode 230 Kth Smallest element in a BST~~
+  > - ~~Leetcode 98 Validate Binary Search Tree~~
+  > - `~~Leetcode 270 Cloest Binary Search Tree Value~~`
+  > - ~~Leetcode 235 Lowest Common Ancestor of a Binary Search Tree~~
+  > - ~~Leetcode 669 Trim a Binary Search Tree~~
+  > - ~~Leetcode 700 Search in a Binary Search Tree~~
+  > - ~~Leetcode 108 Convert Sorted Array to Binary Search Tree~~
+  > - `~~Leetcode 333 Largest BST Subtree (与 98 类似)~~`
+  > - `~~Leetcode 285 Inorder Successor in BST (I, II)~~`
 
 
 - 基于图的 DFS
 
   > 和 BFS 一样一般需要一个 set 来记录访问过的节点，避免重复访问造成死循环; Word XXX 系列面试中非常常见，例如 word break，word ladder，word pattern，word search。
   >
-  > - Leetcode 341 Flatten Nested List Iterator (339 364)
-  > - Leetcode 394 Decode String
+  > - ~~Leetcode 341 Flatten Nested List Iterator~~ (339 364)
+  > - ~~Leetcode 394 Decode String~~
   > - Leetcode 51 N-Queens (I II 基本相同)
   > - Leetcode 291 Word Pattern II (I 为简单的 Hashmap 题)
   > - Leetcode 126 Word Ladder II （I 为 BFS 题目）
@@ -469,4 +658,4 @@
   > - Leetcode 1423 Maximum Points You Can Obtain from Cards
   > - Leetcode 1031 Maximum Sum of Two Non-Overlapping Subarrays
   > - Leetcode 523 Continuous Subarray Sum
-  > - Leetcode 304 Range Sum Query 2D - Immutable
+  > - ~~Leetcode 304 Range Sum Query 2D - Immutable~~
