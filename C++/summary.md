@@ -1,5 +1,5 @@
 # 算法整理     
-696结束105
+841结束
 ---------------------------
 ## 二分
 [leetcode 29两数相除](https://leetcode-cn.com/problems/divide-two-integers/)--[笔记](../leetcode/29-divide-two-integers.md)将两数相除，要求不使用乘法、除法和 mod 运算符计算商，需要截去小数部分。（二分思想）
@@ -69,7 +69,7 @@
 [leetcode 337小偷3](https://leetcode-cn.com/problems/house-robber-iii/)--[笔记](../leetcode/337-house-robber-iii.md)在上次打劫完一条街道之后和一圈房屋后，小偷又发现了一个新的可行窃的地区。这个地区只有一个入口，我们称之为“根”。 除了“根”之外，每栋房子有且只有一个“父“房子与之相连。一番侦察之后，聪明的小偷意识到“这个地方的所有房屋的排列类似于一棵二叉树”。 如果两个直接相连的房子在同一天晚上被打劫，房屋将自动报警。 计算在不触动警报的情况下，小偷一晚能够盗取的最高金额。
 [leetcode 491所有的递增子序列](https://leetcode-cn.com/problems/increasing-subsequences/)--[笔记](../leetcode/491-increasing-subsequences.md)给定一个整型数组, 你的任务是找到所有该数组的递增子序列，递增子序列的长度至少是2。   
 [leetcode 529扫雷游戏](https://leetcode-cn.com/problems/minesweeper/)--[笔记](../leetcode/529-minesweeper.md)让我们一起来玩扫雷游戏！给定一个代表游戏板的二维字符矩阵。 'M' 代表一个未挖出的地雷，'E' 代表一个未挖出的空方块，'B' 代表没有相邻（上，下，左，右，和所有4个对角线）地雷的已挖出的空白方块，数字（'1' 到 '8'）表示有多少地雷与这块已挖出的方块相邻，'X' 则表示一个已挖出的地雷。  
-
+[leetcode 733图像上色-像素](https://leetcode-cn.com/problems/flood-fill/)--[笔记](../leetcode/733-flood-fill.md)有一幅以二维整数数组表示的图画，每一个整数表示该图画的像素值大小，数值在 0 到 65535 之间。  
 
 ## BFS+递归-层次遍历
 [leetcode 22生成括号？](https://leetcode-cn.com/problems/generate-parentheses/)--[笔记](../leetcode/22-generate-parentheses.md)给出 n 代表生成括号的对数，写出一个函数使其能够生成所有可能的并且有效的括号组合，"((()))"...
@@ -79,6 +79,8 @@
 [leetcode 130封闭区域](https://leetcode-cn.com/problems/surrounded-regions/)--[笔记](../leetcode/130-surrounded-regions.md)给定一个二维的矩阵，包含 'X' 和 'O'（字母 O），找到所有被 'X' 围绕的区域，并将这些区域里所有的 'O' 用 'X' 填充。 
 [leetcode 279完全平方数个数最少](https://leetcode-cn.com/problems/perfect-squares/)--[笔记](../leetcode/279-perfect-squares.md)给定正整数 n，找到若干个完全平方数（比如 1, 4, 9, 16, ...）使得它们的和等于 n。你需要让组成和的完全平方数的个数最少。 
 [leetcode 529扫雷游戏](https://leetcode-cn.com/problems/minesweeper/)--[笔记](../leetcode/529-minesweeper.md)让我们一起来玩扫雷游戏！给定一个代表游戏板的二维字符矩阵。 'M' 代表一个未挖出的地雷，'E' 代表一个未挖出的空方块，'B' 代表没有相邻（上，下，左，右，和所有4个对角线）地雷的已挖出的空白方块，数字（'1' 到 '8'）表示有多少地雷与这块已挖出的方块相邻，'X' 则表示一个已挖出的地雷。
+[leetcode 841钥匙和房间](https://leetcode-cn.com/problems/keys-and-rooms/)--[笔记](../leetcode/841-keys-and-rooms.md)有 N 个房间，开始时你位于 0 号房间。每个房间有不同的号码：0，1，2，...，N-1，并且房间里可能有一些钥匙能使你进入下一个房间。
+
 
 ## 动态规划
 [leetcode 53最大和的连续子数组](https://leetcode-cn.com/problems/maximum-subarray)--[笔记](../leetcode/53-maximum-subarray.md)给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
@@ -102,7 +104,8 @@
 [leetcode 416分两个相等的子集](https://leetcode-cn.com/problems/partition-equal-subset-sum/)--[笔记](../leetcode/416-partition-equal-subset-sum.md)给定一个只包含正整数的非空数组。是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。
 [leetcode 486预测赢家](https://leetcode-cn.com/problems/predict-the-winner/)--[笔记](../leetcode/486-predict-the-winner.md)给定一个表示分数的非负整数数组。 玩家 1 从数组任意一端拿取一个分数，随后玩家 2 继续从剩余数组任意一端拿取分数，然后玩家 1 拿，…… 。每次一个玩家只能拿取一个分数，分数被拿取之后不再可取。直到没有剩余分数可取时游戏结束。最终获得分数总和最多的玩家获胜。 
 [leetcode 494目标和的个数](https://leetcode-cn.com/problems/target-sum/)--[笔记](../leetcode/494-target-sum.md)给定一个非负整数数组，a1, a2, ..., an, 和一个目标数，S。现在你有两个符号 + 和 -。对于数组中的任意一个整数，你都可以从 + 或 -中选择一个符号添加在前面。返回可以使最终数组和为目标数 S 的所有添加符号的方法数。
-[leetcode 647回文字串](https://leetcode-cn.com/problems/palindromic-substrings/)--[笔记](../leetcode/647-Palindromic-Substrings.md)给定一个字符串，你的任务是计算这个字符串中有多少个回文子串，具有不同开始位置或结束位置的子串，即使是由相同的字符组成，也会被计为是不同的子串。
+[leetcode 647回文字串](https://leetcode-cn.com/problems/palindromic-substrings/)--[笔记](../leetcode/647-palindromic-substrings.md)给定一个字符串，你的任务是计算这个字符串中有多少个回文子串，具有不同开始位置或结束位置的子串，即使是由相同的字符组成，也会被计为是不同的子串。
+[leetcode 739每日温度](https://leetcode-cn.com/problems/daily-temperatures/)--[笔记](../leetcode/739-daily-temperatures.md)根据每日 气温 列表，请重新生成一个列表，对应位置的输入是你需要再等待多久温度才会升高超过该日的天数。如果之后都不会升高，请在该位置用 0 来代替。
 
 ## 贪心算法
 [leetcode 55跳跃游戏](https://leetcode-cn.com/problems/jump-game/)--[笔记](../leetcode/55-jump-game.md)给定一个非负整数数组，最初位于数组的第一个位置。数组中的每个元素代表在该位置可以跳跃的最大长度。判断是否能够到达最后一个位置。
@@ -169,6 +172,8 @@
 [leetcode 155最小栈](https://leetcode-cn.com/problems/min-stack/)--[笔记](../leetcode/155-min-stack.md)设计一个支持 push ，pop ，top 操作，并能在常数时间内检索到最小元素的栈。 
 [leetcode 215第K个最大的元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)--[笔记](../leetcode/215-kth-largest-element-in-an-array.md)在未排序的数组中找到第 k 个最大的元素。请注意，你需要找的是数组排序后的第 k 个最大的元素，而不是第 k 个不同的元素。 
 [leetcode 394解码字符串](https://leetcode-cn.com/problems/decode-string/)--[笔记](../leetcode/394-decode-string.md)给定一个经过编码的字符串，返回它解码后的字符串。【状态转换机】  
+[leetcode 739每日温度](https://leetcode-cn.com/problems/daily-temperatures/)--[笔记](../leetcode/739-daily-temperatures.md)根据每日 气温 列表，请重新生成一个列表，对应位置的输入是你需要再等待多久温度才会升高超过该日的天数。如果之后都不会升高，请在该位置用 0 来代替。
+[leetcode 841钥匙和房间](https://leetcode-cn.com/problems/keys-and-rooms/)--[笔记](../leetcode/841-keys-and-rooms.md)有 N 个房间，开始时你位于 0 号房间。每个房间有不同的号码：0，1，2，...，N-1，并且房间里可能有一些钥匙能使你进入下一个房间。
 
 
 ## 链表
