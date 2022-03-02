@@ -154,7 +154,7 @@
   >
   >       `.at() empty() size() push_back() pop_back() front() clear() insert() max_size() capacity() erase() resize()`
   >
-  >    2. list 双向链表 很少使用
+  >    2. list 双向链表 
   >
   >       ```c++
   >       #include <list>
@@ -254,7 +254,7 @@
   >        int j=0,k=-1;
   >        next[0] = -1;
   >        while(j<p.size()-1){
-  >            if(j==-1 || p[j]==p[k]){
+  >            if(k==-1 || p[j]==p[k]){
   >                j++,k++;
   >                if(p[j]==p[k])	next[j] = next[k];
   >                else	next[j] = k;
@@ -428,7 +428,7 @@
   > - ~~Leetcode 224. Basic Calculator II (I, II, III, IV)~~
   > - ~~Leetcode 20. Valid Parentheses~~
   > - ~~Leetcode 1472. Design Browser History~~
-  > - Leetcode 1209. Remove All Adjacent Duplicates in String II
+  > - ~~Leetcode 1209. Remove All Adjacent Duplicates in String II~~
   > - Leetcode 1249. Minimum Remove to Make Valid Parentheses
   > - Leetcode 735. Asteroid Collision
 
@@ -508,8 +508,8 @@
   > - ~~Leetcode 16. 3Sum Closest~~
   > - ~~Leetcode 18. 4Sum~~
   > - ~~Leetcode 454. 4Sum II~~
-  > - Leetcode 277. Find the Celebrity
-  > - Leetcode 11. Container With Most Water
+  > - ~~`Leetcode 277. Find the Celebrity`~~
+  > - ~~Leetcode 11. Container With Most Water~~
 
 - 同向双指针
 

@@ -27,6 +27,7 @@ source activate xxx	source deactivate
 conda create -n wal python==3.6.5
 conda remove -n wal --all
 conda info -e   查看所有虚拟环境
+reset 清空当前屏幕
 ```
 #### Linux系统简介
 - 芬兰大学生李纳斯自己的unix，成为linux；

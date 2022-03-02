@@ -82,7 +82,6 @@ public:
   >        return v;
   >    }
   >    ```
-  >
   
 - 整型
 
@@ -103,3 +102,30 @@ public:
   > double:64
   >
   > long double:80 96 128
+  
+- string
+
+  > 1. 字符串查找
+  >
+  >    ```c++
+  >    s.find(s1);
+  >    s.rfind(s1);
+  >    s.find_first_of(s1);
+  >    s.find_last_of(s1);
+  >    s.find_first_not_of(s1);
+  >    s.find_last_not_of(s1);
+  >    ```
+  >
+  > 2. 字符串截取
+  >
+  >    ```
+  >    s.substr(pos,n);
+  >    ```
+  >
+  > 3. 字符串替换
+  >
+  >    ```
+  >    s.replace(pos,n,s1);
+  >    ```
+  >
+  >    
